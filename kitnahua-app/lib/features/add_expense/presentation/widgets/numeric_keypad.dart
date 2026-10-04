@@ -96,11 +96,7 @@ class NumericKeypad extends StatelessWidget {
           ),
           alignment: Alignment.center,
           child: icon != null
-              ? Icon(
-                  icon,
-                  size: 20.0,
-                  color: theme.colorScheme.onSurface,
-                )
+              ? Icon(icon, size: 20.0, color: theme.colorScheme.onSurface)
               : Text(
                   text!,
                   style: TextStyle(

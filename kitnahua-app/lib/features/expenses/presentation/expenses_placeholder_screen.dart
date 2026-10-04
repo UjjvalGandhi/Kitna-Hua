@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../core/adaptive/adaptive.dart';
 import '../../../core/theme/app_theme_extension.dart';
@@ -18,37 +17,15 @@ class ExpensesScreen extends ConsumerWidget {
     final expenses = ref.watch(expensesProvider);
     final cards = ref.watch(cardsProvider);
 
-    return Scaffold(
-      extendBody: true,
-      body: Stack(
-        children: [
-          // Content scrolls under top bar
-          Positioned.fill(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(20.0, 56.0, 20.0, 96.0),
-              children: [
-                for (final exp in expenses) ...[
-                  _buildRow(exp, cards, appColors),
-                  const SizedBox(height: 8.0),
-                ],
-              ],
-            ),
-          ),
-
-          // Pinned Adaptive Top Bar
-          const Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: AdaptiveTopBar(
-              title: 'All Expenses',
-            ),
-          ),
+    return AdaptiveScrollPage(
+      title: 'Expenses',
+      hasAddButton: true,
+      children: [
+        for (final exp in expenses) ...[
+          _buildRow(exp, cards, appColors),
+          const SizedBox(height: 8.0),
         ],
-      ),
-      floatingActionButton: AdaptiveAddButton(
-        onPressed: () => context.push('/add-expense'),
-      ),
+      ],
     );
   }
 

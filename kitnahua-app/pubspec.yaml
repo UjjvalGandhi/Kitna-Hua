@@ -8,7 +8,10 @@ environment:
 
 dependencies:
   cupertino_liquid_glass: ^0.7.1
-  cupertino_native_better: ^1.6.0
+  # Vendored 1.6.0 with a small patch (animated tab selection); see
+  # packages/cupertino_native_better/KITNAHUA_PATCH.md.
+  cupertino_native_better:
+    path: packages/cupertino_native_better
   fl_chart: ^1.2.0
   flutter:
     sdk: flutter

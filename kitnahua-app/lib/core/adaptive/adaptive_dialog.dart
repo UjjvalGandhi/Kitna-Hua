@@ -13,10 +13,7 @@ import 'platform_info.dart';
 ///   and subtle drop shadow.
 /// - iOS Reduce Transparency ON: Solid surfaceContainer background.
 class AdaptiveDialog extends ConsumerWidget {
-  const AdaptiveDialog({
-    super.key,
-    required this.child,
-  });
+  const AdaptiveDialog({super.key, required this.child});
 
   final Widget child;
 

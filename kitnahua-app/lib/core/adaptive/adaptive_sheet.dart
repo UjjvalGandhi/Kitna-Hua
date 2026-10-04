@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/app_radii.dart';
+import 'adaptive_bar_button.dart';
 import 'glass_surface.dart';
 import 'platform_info.dart';
 
@@ -35,11 +36,8 @@ class AdaptiveSheet extends ConsumerWidget {
       isScrollControlled: true,
       enableDrag: true,
       backgroundColor: Colors.transparent,
-      builder: (context) => AdaptiveSheet(
-        title: title,
-        subtitle: subtitle,
-        child: child,
-      ),
+      builder: (context) =>
+          AdaptiveSheet(title: title, subtitle: subtitle, child: child),
     );
   }
 
@@ -47,14 +45,17 @@ class AdaptiveSheet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final platformInfo = ref.watch(platformInfoProvider);
-    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+    // Keyboard when open, otherwise the home indicator area.
+    final bottomInset = MediaQuery.viewInsetsOf(context).bottom > 0
+        ? MediaQuery.viewInsetsOf(context).bottom
+        : MediaQuery.paddingOf(context).bottom;
 
     final sheetContent = Padding(
       padding: EdgeInsets.only(
         left: 20.0,
         right: 20.0,
         top: 12.0,
-        bottom: 24.0 + bottomInset,
+        bottom: 16.0 + bottomInset,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -105,14 +106,11 @@ class AdaptiveSheet extends ConsumerWidget {
                   ],
                 ),
               ),
-              IconButton(
-                onPressed: () => Navigator.of(context).pop(),
-                icon: const Icon(Icons.close, size: 20.0),
-                constraints: const BoxConstraints(
-                  minWidth: 44.0,
-                  minHeight: 44.0,
-                ),
+              AdaptiveBarButton(
+                tooltip: 'Close',
+                icon: Icons.close_rounded,
                 color: theme.colorScheme.onSurfaceVariant,
+                onPressed: () => Navigator.of(context).pop(),
               ),
             ],
           ),

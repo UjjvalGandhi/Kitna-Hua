@@ -12,16 +12,15 @@ import '../features/insights/presentation/insights_screen.dart';
 import '../features/settings/presentation/settings_placeholder_screen.dart';
 import 'app_scaffold.dart';
 
-final GlobalKey<NavigatorState> _rootNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'root');
+final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(
+  debugLabel: 'root',
+);
 
 /// Main application router configuration using go_router.
 final appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
   initialLocation: '/',
-  observers: [
-    CNTabBarRouteObserver(),
-  ],
+  observers: [CNTabBarRouteObserver()],
   routes: [
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
@@ -33,9 +32,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/',
-              pageBuilder: (context, state) => const AdaptivePage(
-                child: DashboardScreen(),
-              ),
+              pageBuilder: (context, state) =>
+                  const AdaptivePage(child: DashboardScreen()),
             ),
           ],
         ),
@@ -45,9 +43,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/expenses',
-              pageBuilder: (context, state) => const AdaptivePage(
-                child: ExpensesScreen(),
-              ),
+              pageBuilder: (context, state) =>
+                  const AdaptivePage(child: ExpensesScreen()),
             ),
           ],
         ),
@@ -57,9 +54,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/budgets',
-              pageBuilder: (context, state) => const AdaptivePage(
-                child: BudgetsScreen(),
-              ),
+              pageBuilder: (context, state) =>
+                  const AdaptivePage(child: BudgetsScreen()),
             ),
           ],
         ),
@@ -69,9 +65,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/insights',
-              pageBuilder: (context, state) => const AdaptivePage(
-                child: InsightsScreen(),
-              ),
+              pageBuilder: (context, state) =>
+                  const AdaptivePage(child: InsightsScreen()),
             ),
           ],
         ),
@@ -81,9 +76,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/cards',
-              pageBuilder: (context, state) => const AdaptivePage(
-                child: CardsScreen(),
-              ),
+              pageBuilder: (context, state) =>
+                  const AdaptivePage(child: CardsScreen()),
             ),
           ],
         ),
@@ -94,16 +88,14 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/add-expense',
       parentNavigatorKey: _rootNavigatorKey,
-      pageBuilder: (context, state) => const AdaptivePage(
-        child: AddExpenseScreen(),
-      ),
+      pageBuilder: (context, state) =>
+          const AdaptivePage(child: AddExpenseScreen()),
     ),
     GoRoute(
       path: '/settings',
       parentNavigatorKey: _rootNavigatorKey,
-      pageBuilder: (context, state) => const AdaptivePage(
-        child: SettingsScreen(),
-      ),
+      pageBuilder: (context, state) =>
+          const AdaptivePage(child: SettingsScreen()),
     ),
   ],
 );

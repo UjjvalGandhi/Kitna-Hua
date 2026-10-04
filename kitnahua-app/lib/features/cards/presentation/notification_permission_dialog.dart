@@ -16,9 +16,7 @@ class NotificationPermissionDialog extends StatelessWidget {
   static Future<bool?> show(BuildContext context, int remindDaysBefore) {
     return AdaptiveDialog.show<bool>(
       context: context,
-      child: NotificationPermissionDialog(
-        remindDaysBefore: remindDaysBefore,
-      ),
+      child: NotificationPermissionDialog(remindDaysBefore: remindDaysBefore),
     );
   }
 
@@ -34,8 +32,7 @@ class NotificationPermissionDialog extends StatelessWidget {
         IconTile(
           size: 56.0,
           borderRadius: 16.0,
-          backgroundColor:
-              theme.colorScheme.primary.withValues(alpha: 0.10),
+          backgroundColor: theme.colorScheme.primary.withValues(alpha: 0.10),
           icon: Icons.notifications_active_outlined,
           iconSize: 30.0,
           iconColor: theme.colorScheme.primary,
@@ -72,15 +69,9 @@ class NotificationPermissionDialog extends StatelessWidget {
           'Alert when your bill is generated & before the due date',
         ),
         const SizedBox(height: 8.0),
-        _buildBullet(
-          theme,
-          'Amounts come only from expenses you log',
-        ),
+        _buildBullet(theme, 'Amounts come only from expenses you log'),
         const SizedBox(height: 8.0),
-        _buildBullet(
-          theme,
-          'Reminders are scheduled on your phone',
-        ),
+        _buildBullet(theme, 'Reminders are scheduled on your phone'),
         const SizedBox(height: 20.0),
 
         // Primary "Allow" button

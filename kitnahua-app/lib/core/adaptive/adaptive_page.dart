@@ -22,15 +22,9 @@ class AdaptivePage<T> extends Page<T> {
   Route<T> createRoute(BuildContext context) {
     final isIOS = defaultTargetPlatform == TargetPlatform.iOS;
     if (isIOS) {
-      return CupertinoPageRoute<T>(
-        settings: this,
-        builder: (context) => child,
-      );
+      return CupertinoPageRoute<T>(settings: this, builder: (context) => child);
     }
-    return MaterialPageRoute<T>(
-      settings: this,
-      builder: (context) => child,
-    );
+    return MaterialPageRoute<T>(settings: this, builder: (context) => child);
   }
 }
 
@@ -41,9 +35,5 @@ Page<T> buildAdaptivePage<T>({
   LocalKey? key,
   String? name,
 }) {
-  return AdaptivePage<T>(
-    key: key,
-    name: name,
-    child: child,
-  );
+  return AdaptivePage<T>(key: key, name: name, child: child);
 }

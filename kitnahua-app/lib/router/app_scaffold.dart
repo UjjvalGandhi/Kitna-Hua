@@ -8,10 +8,7 @@ import '../core/adaptive/adaptive.dart';
 /// - iOS 26+: Native Liquid Glass tab bar capsule.
 /// - iOS < 26 / Reduce Transparency: Solid CupertinoTabBar.
 class AppScaffold extends StatelessWidget {
-  const AppScaffold({
-    super.key,
-    required this.navigationShell,
-  });
+  const AppScaffold({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
@@ -19,6 +16,7 @@ class AppScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveTabScaffold(
       navigationShell: navigationShell,
+      onAddExpense: () => context.push('/add-expense'),
     );
   }
 }

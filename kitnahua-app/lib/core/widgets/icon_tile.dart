@@ -32,11 +32,7 @@ class IconTile extends StatelessWidget {
         border: border,
       ),
       alignment: Alignment.center,
-      child: Icon(
-        icon,
-        size: iconSize,
-        color: iconColor,
-      ),
+      child: Icon(icon, size: iconSize, color: iconColor),
     );
   }
 }

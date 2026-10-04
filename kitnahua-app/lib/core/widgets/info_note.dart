@@ -34,11 +34,7 @@ class InfoNote extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            icon,
-            size: 16.0,
-            color: theme.colorScheme.primary,
-          ),
+          Icon(icon, size: 16.0, color: theme.colorScheme.primary),
           const SizedBox(width: 10.0),
           Expanded(
             child: Text(
@@ -51,10 +47,7 @@ class InfoNote extends StatelessWidget {
               ),
             ),
           ),
-          if (trailing != null) ...[
-            const SizedBox(width: 8.0),
-            trailing!,
-          ],
+          if (trailing != null) ...[const SizedBox(width: 8.0), trailing!],
         ],
       ),
     );

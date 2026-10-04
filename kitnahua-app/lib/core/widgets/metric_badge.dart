@@ -64,11 +64,7 @@ class MetricBadge extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           if (icon != null) ...[
-            Icon(
-              icon,
-              size: fontSize + 2.0,
-              color: textColor,
-            ),
+            Icon(icon, size: fontSize + 2.0, color: textColor),
             const SizedBox(width: 4.0),
           ],
           Text(

@@ -65,21 +65,20 @@ class GlassSurface extends ConsumerWidget {
           color: solidFallbackColor,
           borderRadius: resolvedBorderRadius,
           border: Border.all(
-            color: borderColor ??
+            color:
+                borderColor ??
                 theme.colorScheme.outlineVariant.withValues(alpha: 0.40),
             width: borderWidth,
           ),
-          boxShadow: [
-            appColors.glassShadow,
-          ],
+          boxShadow: [appColors.glassShadow],
         ),
         child: child,
       );
     }
 
     // iOS 26+ Liquid Glass
-    final double resolvedOpacity = tintOpacity ??
-        (appColors.isDark ? 0.45 : 0.55);
+    final double resolvedOpacity =
+        tintOpacity ?? (appColors.isDark ? 0.45 : 0.55);
 
     return CupertinoLiquidGlass(
       width: width,

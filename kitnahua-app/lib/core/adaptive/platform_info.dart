@@ -104,7 +104,8 @@ class PlatformInfoNotifier extends Notifier<PlatformInfo> {
     }
 
     final binding = WidgetsBinding.instance;
-    final bool highContrast = binding.platformDispatcher.accessibilityFeatures.highContrast;
+    final bool highContrast =
+        binding.platformDispatcher.accessibilityFeatures.highContrast;
 
     // Register accessibility change listener
     _observer = _AccessibilityObserver(() {
@@ -151,4 +152,6 @@ class PlatformInfoNotifier extends Notifier<PlatformInfo> {
 
 /// Provider exposing the current [PlatformInfo].
 final platformInfoProvider =
-    NotifierProvider<PlatformInfoNotifier, PlatformInfo>(PlatformInfoNotifier.new);
+    NotifierProvider<PlatformInfoNotifier, PlatformInfo>(
+      PlatformInfoNotifier.new,
+    );

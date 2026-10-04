@@ -18,9 +18,15 @@ class TotalSpentCard extends ConsumerWidget {
     final totalSpentMinor = ref.watch(totalSpentMonthProvider);
     final budgetLimitMinor = ref.watch(monthlyBudgetProvider);
 
-    final remainingMinor = (budgetLimitMinor - totalSpentMinor).clamp(0, budgetLimitMinor);
+    final remainingMinor = (budgetLimitMinor - totalSpentMinor).clamp(
+      0,
+      budgetLimitMinor,
+    );
     final percentUsed = ((totalSpentMinor / budgetLimitMinor) * 100).round();
-    final progressFraction = (totalSpentMinor / budgetLimitMinor).clamp(0.0, 1.0);
+    final progressFraction = (totalSpentMinor / budgetLimitMinor).clamp(
+      0.0,
+      1.0,
+    );
 
     return AppSurfaceCard(
       child: Column(
@@ -46,14 +52,13 @@ class TotalSpentCard extends ConsumerWidget {
                     const SizedBox(height: 4.0),
                     Text(
                       MoneyFormatter.formatPaise(totalSpentMinor),
-                      style: theme.textTheme.displaySmall
-                          ?.withTabularFigures
+                      style: theme.textTheme.displaySmall?.withTabularFigures
                           .copyWith(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: -0.5,
-                        color: theme.colorScheme.onSurface,
-                      ),
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.5,
+                            color: theme.colorScheme.onSurface,
+                          ),
                     ),
                   ],
                 ),

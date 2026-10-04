@@ -26,57 +26,34 @@ class CardsScreen extends ConsumerWidget {
     final cards = ref.watch(cardsProvider);
     final now = ref.watch(clockProvider);
 
-    return Scaffold(
-      extendBody: true,
-      body: Stack(
-        children: [
-          // Content scrolls under top bar
-          Positioned.fill(
-            child: cards.isEmpty
-                ? _buildEmptyState(context)
-                : ListView(
-                    padding: const EdgeInsets.fromLTRB(20.0, 56.0, 20.0, 96.0),
-                    children: [
-                      const InfoNote(
-                        icon: Icons.info_outline,
-                        text:
-                            'Track billing cycles offline. Amounts represent expenses logged in Kitna Hua for that cycle.',
-                      ),
-                      const SizedBox(height: 12.0),
-                      for (final card in cards) ...[
-                        _buildCardItem(context, ref, card, now),
-                        const SizedBox(height: 12.0),
-                      ],
-                      DashedAddButton(
-                        label: 'Add another card',
-                        onTap: () => AddCardSheet.show(context),
-                      ),
-                    ],
-                  ),
-          ),
-
-          // Pinned Adaptive Top Bar
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: AdaptiveTopBar(
-              title: 'Credit Cards',
-              actions: [
-                IconButton(
-                  onPressed: () => AddCardSheet.show(context),
-                  icon: const Icon(Icons.add, size: 22.0),
-                  constraints: const BoxConstraints(
-                    minWidth: 48.0,
-                    minHeight: 48.0,
-                  ),
-                  color: theme.colorScheme.primary,
-                ),
+    return AdaptiveScrollPage(
+      title: 'Credit Cards',
+      actions: [
+        AdaptiveBarButton(
+          tooltip: 'Add credit card',
+          icon: Icons.add_rounded,
+          color: theme.colorScheme.primary,
+          onPressed: () => AddCardSheet.show(context),
+        ),
+      ],
+      children: cards.isEmpty
+          ? [_buildEmptyState(context)]
+          : [
+              const InfoNote(
+                icon: Icons.info_outline,
+                text:
+                    'Track billing cycles offline. Amounts represent expenses logged in Kitna Hua for that cycle.',
+              ),
+              const SizedBox(height: 12.0),
+              for (final card in cards) ...[
+                _buildCardItem(context, ref, card, now),
+                const SizedBox(height: 12.0),
               ],
-            ),
-          ),
-        ],
-      ),
+              DashedAddButton(
+                label: 'Add another card',
+                onTap: () => AddCardSheet.show(context),
+              ),
+            ],
     );
   }
 
@@ -91,8 +68,7 @@ class CardsScreen extends ConsumerWidget {
     final cycleRangeStr = DateHelpers.formatCycleRange(cycle.start, cycle.end);
     final dueStr = DateFormat('d MMM').format(cycle.dueDate);
     final daysUntilDue = DateHelpers.daysBetween(now, cycle.dueDate);
-    final nextBillDate = DateTime(now.year, now.month + 1, card.billDay);
-    final nextBillStr = DateFormat('d MMM').format(nextBillDate);
+    final nextBillStr = DateFormat('d MMM').format(cycle.billDate);
 
     return AppSurfaceCard(
       border: Border.all(
@@ -181,13 +157,12 @@ class CardsScreen extends ConsumerWidget {
                   children: [
                     Text(
                       MoneyFormatter.formatPaise(card.currentCycleAmountMinor),
-                      style: theme.textTheme.headlineSmall
-                          ?.withTabularFigures
+                      style: theme.textTheme.headlineSmall?.withTabularFigures
                           .copyWith(
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.w700,
-                        color: theme.colorScheme.onSurface,
-                      ),
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.w700,
+                            color: theme.colorScheme.onSurface,
+                          ),
                     ),
                     const SizedBox(width: 4.0),
                     Expanded(

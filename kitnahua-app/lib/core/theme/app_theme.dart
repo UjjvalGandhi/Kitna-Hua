@@ -78,7 +78,10 @@ abstract final class AppTheme {
     return _buildTheme(colorScheme, AppThemeExtension.dark);
   }
 
-  static ThemeData _buildTheme(ColorScheme colorScheme, AppThemeExtension extension) {
+  static ThemeData _buildTheme(
+    ColorScheme colorScheme,
+    AppThemeExtension extension,
+  ) {
     final textTheme = AppTypography.createTextTheme(
       brightness: colorScheme.brightness,
       onSurface: colorScheme.onSurface,
@@ -125,7 +128,9 @@ abstract final class AppTheme {
           final isSelected = states.contains(WidgetState.selected);
           return IconThemeData(
             size: 20,
-            color: isSelected ? colorScheme.primary : colorScheme.onSurfaceVariant,
+            color: isSelected
+                ? colorScheme.primary
+                : colorScheme.onSurfaceVariant,
           );
         }),
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
@@ -134,7 +139,9 @@ abstract final class AppTheme {
             fontFamily: AppTypography.fontFamily,
             fontSize: 11,
             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-            color: isSelected ? colorScheme.primary : colorScheme.onSurfaceVariant,
+            color: isSelected
+                ? colorScheme.primary
+                : colorScheme.onSurfaceVariant,
           );
         }),
       ),
@@ -152,9 +159,8 @@ abstract final class AppTheme {
         backgroundColor: colorScheme.surface,
         modalBackgroundColor: colorScheme.surface,
         elevation: AppElevation.level2,
-        showDragHandle: true,
-        dragHandleSize: const Size(48, 4),
-        dragHandleColor: colorScheme.outlineVariant,
+        // AdaptiveSheet draws its own grabber (platform-sized).
+        showDragHandle: false,
         shape: const RoundedRectangleBorder(
           borderRadius: AppRadii.sheetBorderRadius,
         ),
@@ -183,17 +189,11 @@ abstract final class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: AppRadii.inputBorderRadius,
-          borderSide: BorderSide(
-            color: colorScheme.primary,
-            width: 1.5,
-          ),
+          borderSide: BorderSide(color: colorScheme.primary, width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: AppRadii.inputBorderRadius,
-          borderSide: BorderSide(
-            color: colorScheme.error,
-            width: 1.0,
-          ),
+          borderSide: BorderSide(color: colorScheme.error, width: 1.0),
         ),
         hintStyle: textTheme.bodyMedium?.copyWith(
           color: colorScheme.onSurfaceVariant,
@@ -230,7 +230,10 @@ abstract final class AppTheme {
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          minimumSize: const Size(AppSpacing.minTouchTarget, AppSpacing.minTouchTarget),
+          minimumSize: const Size(
+            AppSpacing.minTouchTarget,
+            AppSpacing.minTouchTarget,
+          ),
           textStyle: textTheme.labelMedium?.copyWith(
             fontWeight: FontWeight.w600,
           ),

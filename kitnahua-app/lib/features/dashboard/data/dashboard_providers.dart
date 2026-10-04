@@ -241,7 +241,11 @@ final categorySpendBreakdownProvider = Provider<List<CategorySpend>>((ref) {
   return [
     CategorySpend(categoryId: 'rent', name: 'Rent', amountMinor: rent),
     CategorySpend(categoryId: 'food', name: 'Food & Dining', amountMinor: food),
-    CategorySpend(categoryId: 'groceries', name: 'Groceries', amountMinor: groceries),
+    CategorySpend(
+      categoryId: 'groceries',
+      name: 'Groceries',
+      amountMinor: groceries,
+    ),
     CategorySpend(categoryId: 'others', name: 'Others', amountMinor: others),
   ];
 });
@@ -264,5 +268,5 @@ class CardDueDismissedNotifier extends Notifier<bool> {
 /// Dismissed state for the credit card due card on dashboard.
 final cardDueDismissedProvider =
     NotifierProvider<CardDueDismissedNotifier, bool>(
-  CardDueDismissedNotifier.new,
-);
+      CardDueDismissedNotifier.new,
+    );

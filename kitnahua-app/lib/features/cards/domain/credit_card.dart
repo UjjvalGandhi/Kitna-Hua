@@ -41,30 +41,43 @@ class CreditCard {
     return '$nickname ••$last4';
   }
 
-  /// Calculates the current cycle start and end dates relative to [now].
-  ({DateTime start, DateTime end, DateTime dueDate}) cycleInfo(DateTime now) {
-    // If today's day is >= billDay, current cycle started this month on billDay.
-    // Otherwise it started last month on billDay.
-    final DateTime cycleStart;
-    final DateTime cycleEnd;
-    final DateTime dueDate;
-
-    if (now.day >= billDay) {
-      cycleStart = DateTime(now.year, now.month, billDay);
-      final nextMonth = DateTime(now.year, now.month + 1, 1);
-      final daysInNext = DateTime(nextMonth.year, nextMonth.month + 1, 0).day;
-      final endDay = billDay - 1 <= daysInNext ? billDay - 1 : daysInNext;
-      cycleEnd = DateTime(nextMonth.year, nextMonth.month, endDay);
-      // Due date is in month after next if dueDay < billDay, else next month
-      dueDate = DateTime(now.year, now.month + 1, dueDay);
-    } else {
-      final prevMonth = DateTime(now.year, now.month - 1, 1);
-      cycleStart = DateTime(prevMonth.year, prevMonth.month, billDay);
-      cycleEnd = DateTime(now.year, now.month, billDay - 1);
-      dueDate = DateTime(now.year, now.month, dueDay);
+  /// The billing cycle that contains [now]:
+  /// - [start]: last bill day on or before today; [end]: the day before the
+  ///   next bill day.
+  /// - [billDate]: when this cycle's statement is generated (next bill day).
+  /// - [dueDate]: the first [dueDay] after [billDate].
+  /// Days past a month's end (e.g. 31 in September) fall on its last day.
+  ({DateTime start, DateTime end, DateTime billDate, DateTime dueDate})
+  cycleInfo(DateTime now) {
+    final today = DateTime(now.year, now.month, now.day);
+    final billThisMonth = _onDay(today.year, today.month, billDay);
+    final start = today.isBefore(billThisMonth)
+        ? _onDay(today.year, today.month - 1, billDay)
+        : billThisMonth;
+    final billDate = _onDay(start.year, start.month + 1, billDay);
+    var dueDate = _onDay(billDate.year, billDate.month, dueDay);
+    if (!dueDate.isAfter(billDate)) {
+      dueDate = _onDay(billDate.year, billDate.month + 1, dueDay);
     }
+    return (
+      start: start,
+      end: billDate.subtract(const Duration(days: 1)),
+      billDate: billDate,
+      dueDate: dueDate,
+    );
+  }
 
-    return (start: cycleStart, end: cycleEnd, dueDate: dueDate);
+  /// The most recent statement before [now]'s cycle: generated on this
+  /// cycle's start and due on the first [dueDay] after that.
+  ({DateTime billDate, DateTime dueDate}) lastStatement(DateTime now) {
+    final current = cycleInfo(now);
+    final previous = cycleInfo(current.start.subtract(const Duration(days: 1)));
+    return (billDate: previous.billDate, dueDate: previous.dueDate);
+  }
+
+  static DateTime _onDay(int year, int month, int day) {
+    final lastDay = DateTime(year, month + 1, 0).day;
+    return DateTime(year, month, day > lastDay ? lastDay : day);
   }
 
   CreditCard copyWith({

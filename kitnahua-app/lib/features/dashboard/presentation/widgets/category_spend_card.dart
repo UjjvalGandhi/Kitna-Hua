@@ -83,13 +83,12 @@ class CategorySpendCard extends ConsumerWidget {
                         ),
                         Text(
                           '₹${(totalSpentMinor / 100000).toStringAsFixed(1)}k',
-                          style: theme.textTheme.labelMedium
-                              ?.withTabularFigures
+                          style: theme.textTheme.labelMedium?.withTabularFigures
                               .copyWith(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w700,
-                            color: theme.colorScheme.onSurface,
-                          ),
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.w700,
+                                color: theme.colorScheme.onSurface,
+                              ),
                         ),
                       ],
                     ),
@@ -130,13 +129,15 @@ class CategorySpendCard extends ConsumerWidget {
                             ),
                             Text(
                               MoneyFormatter.formatPaise(item.amountMinor),
-                              style: theme.textTheme.bodyMedium
+                              style: theme
+                                  .textTheme
+                                  .bodyMedium
                                   ?.withTabularFigures
                                   .copyWith(
-                                fontSize: 12.0,
-                                fontWeight: FontWeight.w600,
-                                color: theme.colorScheme.onSurface,
-                              ),
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: theme.colorScheme.onSurface,
+                                  ),
                             ),
                           ],
                         ),

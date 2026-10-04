@@ -112,11 +112,9 @@ abstract final class AppTypography {
 
 /// Helper extension to enable tabular figures for aligned numeric currency displays.
 extension TabularFiguresExtension on TextStyle {
-  TextStyle get tabularFigures => copyWith(
-    fontFeatures: const [FontFeature.tabularFigures()],
-  );
+  TextStyle get tabularFigures =>
+      copyWith(fontFeatures: const [FontFeature.tabularFigures()]);
 
-  TextStyle get withTabularFigures => copyWith(
-    fontFeatures: const [FontFeature.tabularFigures()],
-  );
+  TextStyle get withTabularFigures =>
+      copyWith(fontFeatures: const [FontFeature.tabularFigures()]);
 }

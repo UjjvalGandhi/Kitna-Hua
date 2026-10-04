@@ -4,8 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Insights tab renders AI briefing and 4 monthly insight cards',
-      (tester) async {
+  testWidgets('Insights tab renders AI briefing and 4 monthly insight cards', (
+    tester,
+  ) async {
     tester.view.physicalSize = const Size(390 * 3, 1000 * 3);
     tester.view.devicePixelRatio = 3.0;
     addTearDown(() {
@@ -13,11 +14,7 @@ void main() {
       tester.view.resetDevicePixelRatio();
     });
 
-    await tester.pumpWidget(
-      const ProviderScope(
-        child: KitnaHuaApp(),
-      ),
-    );
+    await tester.pumpWidget(const ProviderScope(child: KitnaHuaApp()));
     await tester.pumpAndSettle();
 
     // Tap Insights tab
@@ -25,7 +22,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify Insights header and briefing
-    expect(find.text('Financial Insights'), findsOneWidget);
+    expect(find.text('Insights'), findsWidgets);
     expect(find.text('Monthly AI Briefing'), findsOneWidget);
     expect(find.text('MONTHLY INSIGHTS (4)'), findsOneWidget);
 

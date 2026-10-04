@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/widgets/inline_input_decoration.dart';
 import '../../../core/adaptive/adaptive.dart';
 import '../../../core/theme/app_radii.dart';
 import '../../../core/widgets/info_note.dart';
@@ -216,7 +217,8 @@ class _AddCardSheetState extends ConsumerState<AddCardSheet> {
           // Info Note
           const InfoNote(
             icon: Icons.verified_user_outlined,
-            text: 'We only use these dates for reminders. No card details are stored.',
+            text:
+                'We only use these dates for reminders. No card details are stored.',
           ),
           const SizedBox(height: 16.0),
 
@@ -267,16 +269,15 @@ class _AddCardSheetState extends ConsumerState<AddCardSheet> {
         keyboardType: keyboardType,
         maxLength: maxLength,
         buildCounter: maxLength != null
-            ? (_, {required currentLength, required isFocused, maxLength}) => null
+            ? (_, {required currentLength, required isFocused, maxLength}) =>
+                  null
             : null,
         style: TextStyle(
           fontSize: 12.0,
           fontWeight: FontWeight.w600,
           color: theme.colorScheme.onSurface,
         ),
-        decoration: InputDecoration(
-          isDense: true,
-          border: InputBorder.none,
+        decoration: inlineInputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(
             fontSize: 12.0,
@@ -288,10 +289,7 @@ class _AddCardSheetState extends ConsumerState<AddCardSheet> {
     );
   }
 
-  Widget _buildDayPicker({
-    required String value,
-    required VoidCallback onTap,
-  }) {
+  Widget _buildDayPicker({required String value, required VoidCallback onTap}) {
     final theme = Theme.of(context);
     return InkWell(
       onTap: onTap,

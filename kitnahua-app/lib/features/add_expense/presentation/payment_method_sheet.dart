@@ -63,9 +63,7 @@ class PaymentMethodSheet extends ConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           // Section 1: Credit cards
-          const SectionHeader(
-            title: 'Credit Cards (Cycle Reminders)',
-          ),
+          const SectionHeader(title: 'Credit Cards (Cycle Reminders)'),
           const SizedBox(height: 8.0),
 
           for (final card in cards) ...[
@@ -125,9 +123,7 @@ class PaymentMethodSheet extends ConsumerWidget {
           const SizedBox(height: 16.0),
 
           // Section 2: Other payment methods
-          const SectionHeader(
-            title: 'Other Payment Methods',
-          ),
+          const SectionHeader(title: 'Other Payment Methods'),
           const SizedBox(height: 10.0),
 
           // 2x2 grid
@@ -189,12 +185,9 @@ class PaymentMethodSheet extends ConsumerWidget {
 
     return InkWell(
       onTap: () {
-        Navigator.of(context).pop(
-          PaymentMethodSelection(
-            method: label,
-            displayLabel: label,
-          ),
-        );
+        Navigator.of(
+          context,
+        ).pop(PaymentMethodSelection(method: label, displayLabel: label));
       },
       borderRadius: AppRadii.rowBorderRadius,
       child: Container(

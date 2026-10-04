@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/widgets/inline_input_decoration.dart';
 import '../../../core/adaptive/adaptive.dart';
 import '../../../core/theme/app_radii.dart';
 import '../../../core/theme/app_theme_extension.dart';
@@ -124,10 +125,14 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
       _merchantController.text = 'Swiggy Dinner';
       _paymentMethod = 'UPI';
       _paymentDisplay = 'UPI';
-    } else if (lower.contains('uber') || lower.contains('ola') || lower.contains('cab')) {
+    } else if (lower.contains('uber') ||
+        lower.contains('ola') ||
+        lower.contains('cab')) {
       _selectedCategoryId = 'transport';
       _merchantController.text = 'Uber Ride';
-    } else if (lower.contains('bigbasket') || lower.contains('grocery') || lower.contains('blinkit')) {
+    } else if (lower.contains('bigbasket') ||
+        lower.contains('grocery') ||
+        lower.contains('blinkit')) {
       _selectedCategoryId = 'groceries';
       _merchantController.text = 'Grocery Order';
     } else {
@@ -171,16 +176,12 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
           children: [
             // Top Bar
             AdaptiveTopBar(
-              leading: IconButton(
-                onPressed: () => context.pop(),
-                icon: const Icon(Icons.close, size: 22.0),
-                constraints: const BoxConstraints(
-                  minWidth: 48.0,
-                  minHeight: 48.0,
-                ),
-                color: theme.colorScheme.onSurface,
-              ),
               title: 'Add Expense',
+              leading: AdaptiveBarButton(
+                tooltip: 'Close',
+                icon: Icons.close_rounded,
+                onPressed: () => context.pop(),
+              ),
             ),
 
             // Scrollable fields
@@ -195,7 +196,9 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                       color: theme.colorScheme.primary.withValues(alpha: 0.10),
                       borderRadius: AppRadii.rowBorderRadius,
                       border: Border.all(
-                        color: theme.colorScheme.primary.withValues(alpha: 0.25),
+                        color: theme.colorScheme.primary.withValues(
+                          alpha: 0.25,
+                        ),
                         width: 1.0,
                       ),
                     ),
@@ -215,16 +218,13 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                               fontWeight: FontWeight.w500,
                               color: theme.colorScheme.onSurface,
                             ),
-                            decoration: InputDecoration(
+                            decoration: inlineInputDecoration(
                               hintText: 'Type: 450 swiggy dinner',
                               hintStyle: TextStyle(
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w400,
                                 color: theme.colorScheme.onSurfaceVariant,
                               ),
-                              isDense: true,
-                              border: InputBorder.none,
-                              contentPadding: EdgeInsets.zero,
                             ),
                             onSubmitted: (_) => _handleParse(),
                           ),
@@ -296,13 +296,15 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                           const SizedBox(width: 4.0),
                           Text(
                             _amountString,
-                            style: theme.textTheme.displaySmall
+                            style: theme
+                                .textTheme
+                                .displaySmall
                                 ?.withTabularFigures
                                 .copyWith(
-                              fontSize: 44.0,
-                              fontWeight: FontWeight.w700,
-                              color: theme.colorScheme.onSurface,
-                            ),
+                                  fontSize: 44.0,
+                                  fontWeight: FontWeight.w700,
+                                  color: theme.colorScheme.onSurface,
+                                ),
                           ),
                           FadeTransition(
                             opacity: _cursorController,
@@ -375,8 +377,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                                     style: TextStyle(
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w500,
-                                      color:
-                                          theme.colorScheme.onSurfaceVariant,
+                                      color: theme.colorScheme.onSurfaceVariant,
                                     ),
                                   ),
                                   if (_isAiParsed) ...[
@@ -396,11 +397,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                                   fontWeight: FontWeight.w600,
                                   color: theme.colorScheme.onSurface,
                                 ),
-                                decoration: const InputDecoration(
-                                  isDense: true,
-                                  border: InputBorder.none,
-                                  contentPadding: EdgeInsets.zero,
-                                ),
+                                decoration: inlineInputDecoration(),
                               ),
                             ],
                           ),
@@ -436,8 +433,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                               const SizedBox(width: 8.0),
                               Expanded(
                                 child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       'Date',
@@ -517,7 +513,8 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
                                         style: TextStyle(
                                           fontSize: 11.0,
                                           color: theme
-                                              .colorScheme.onSurfaceVariant,
+                                              .colorScheme
+                                              .onSurfaceVariant,
                                         ),
                                       ),
                                       Text(
@@ -576,10 +573,7 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
     );
   }
 
-  Widget _buildCategoryChip(
-    dynamic category,
-    AppThemeExtension appColors,
-  ) {
+  Widget _buildCategoryChip(dynamic category, AppThemeExtension appColors) {
     final isSelected = _selectedCategoryId == category.id;
     final catColor = appColors.colorForCategory(category.name);
 
@@ -597,10 +591,9 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
           border: isSelected
               ? null
               : Border.all(
-                  color: Theme.of(context)
-                      .colorScheme
-                      .outlineVariant
-                      .withValues(alpha: 0.50),
+                  color: Theme.of(
+                    context,
+                  ).colorScheme.outlineVariant.withValues(alpha: 0.50),
                   width: 1.0,
                 ),
         ),
@@ -639,10 +632,9 @@ class _AddExpenseScreenState extends ConsumerState<AddExpenseScreen>
         color: Theme.of(context).colorScheme.surfaceContainer,
         borderRadius: BorderRadius.circular(999.0),
         border: Border.all(
-          color: Theme.of(context)
-              .colorScheme
-              .outlineVariant
-              .withValues(alpha: 0.50),
+          color: Theme.of(
+            context,
+          ).colorScheme.outlineVariant.withValues(alpha: 0.50),
           width: 1.0,
         ),
       ),

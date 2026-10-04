@@ -4,8 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Dashboard renders total card, categories, and recent expenses',
-      (tester) async {
+  testWidgets('Dashboard renders total card, categories, and recent expenses', (
+    tester,
+  ) async {
     tester.view.physicalSize = const Size(390 * 3, 1000 * 3);
     tester.view.devicePixelRatio = 3.0;
     addTearDown(() {
@@ -13,17 +14,13 @@ void main() {
       tester.view.resetDevicePixelRatio();
     });
 
-    await tester.pumpWidget(
-      const ProviderScope(
-        child: KitnaHuaApp(),
-      ),
-    );
+    await tester.pumpWidget(const ProviderScope(child: KitnaHuaApp()));
 
     await tester.pumpAndSettle();
 
     // Verify header elements
-    expect(find.text('October 2026'), findsOneWidget);
-    expect(find.text('2 pending sync'), findsOneWidget);
+    expect(find.text('October 2026'), findsWidgets);
+    expect(find.text('2 pending'), findsOneWidget);
 
     // Verify Total spent card
     expect(find.text('Total Spent this Month'), findsOneWidget);

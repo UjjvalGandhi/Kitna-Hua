@@ -5,11 +5,7 @@ import '../theme/app_radii.dart';
 /// Full-width button with dashed border, add icon, and primary label.
 /// Border rendered via CustomPainter (no external package).
 class DashedAddButton extends StatelessWidget {
-  const DashedAddButton({
-    super.key,
-    required this.label,
-    required this.onTap,
-  });
+  const DashedAddButton({super.key, required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -36,11 +32,7 @@ class DashedAddButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.add,
-                size: 16.0,
-                color: primaryColor,
-              ),
+              Icon(Icons.add, size: 16.0, color: primaryColor),
               const SizedBox(width: 8.0),
               Text(
                 label,

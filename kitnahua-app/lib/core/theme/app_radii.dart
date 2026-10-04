@@ -21,12 +21,24 @@ abstract final class AppRadii {
   static const double dialog = xxl; // 28
 
   // Radius helpers
-  static const BorderRadius smBorderRadius = BorderRadius.all(Radius.circular(sm));
-  static const BorderRadius mdBorderRadius = BorderRadius.all(Radius.circular(md));
-  static const BorderRadius lgBorderRadius = BorderRadius.all(Radius.circular(lg));
-  static const BorderRadius xlBorderRadius = BorderRadius.all(Radius.circular(xl));
-  static const BorderRadius xxlBorderRadius = BorderRadius.all(Radius.circular(xxl));
-  static const BorderRadius fullBorderRadius = BorderRadius.all(Radius.circular(full));
+  static const BorderRadius smBorderRadius = BorderRadius.all(
+    Radius.circular(sm),
+  );
+  static const BorderRadius mdBorderRadius = BorderRadius.all(
+    Radius.circular(md),
+  );
+  static const BorderRadius lgBorderRadius = BorderRadius.all(
+    Radius.circular(lg),
+  );
+  static const BorderRadius xlBorderRadius = BorderRadius.all(
+    Radius.circular(xl),
+  );
+  static const BorderRadius xxlBorderRadius = BorderRadius.all(
+    Radius.circular(xxl),
+  );
+  static const BorderRadius fullBorderRadius = BorderRadius.all(
+    Radius.circular(full),
+  );
 
   // Alias helpers
   static const BorderRadius cardBorderRadius = xlBorderRadius;
@@ -35,6 +47,10 @@ abstract final class AppRadii {
   static const BorderRadius inputBorderRadius = mdBorderRadius;
   static const BorderRadius chipBorderRadius = fullBorderRadius;
   static const BorderRadius pillBorderRadius = fullBorderRadius;
-  static const BorderRadius sheetBorderRadius = BorderRadius.vertical(top: Radius.circular(sheet));
-  static const BorderRadius dialogBorderRadius = BorderRadius.all(Radius.circular(dialog));
+  static const BorderRadius sheetBorderRadius = BorderRadius.vertical(
+    top: Radius.circular(sheet),
+  );
+  static const BorderRadius dialogBorderRadius = BorderRadius.all(
+    Radius.circular(dialog),
+  );
 }

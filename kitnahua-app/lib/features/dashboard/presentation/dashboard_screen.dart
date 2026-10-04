@@ -23,50 +23,31 @@ class DashboardScreen extends ConsumerWidget {
     final recentExpenses = ref.watch(recentExpensesProvider);
     final cards = ref.watch(cardsProvider);
 
-    return Scaffold(
-      extendBody: true,
-      body: Stack(
-        children: [
-          // Content scrolls under top bar
-          Positioned.fill(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(20.0, 68.0, 20.0, 96.0),
-              children: [
-                const TotalSpentCard(),
-                const SizedBox(height: 12.0),
-                const CategorySpendCard(),
-                const SizedBox(height: 12.0),
-                const CreditCardDueCard(),
-                const SizedBox(height: 12.0),
-                SectionHeader(
-                  title: 'Recent Expenses',
-                  actionLabel: 'View all',
-                  fontSize: 12.0,
-                  onAction: () => context.go('/expenses'),
-                ),
-                const SizedBox(height: 8.0),
-                for (final exp in recentExpenses) ...[
-                  _buildExpenseTile(exp, cards, appColors),
-                  const SizedBox(height: 8.0),
-                ],
-              ],
-            ),
-          ),
-
-          // Pinned Top Bar (Glass on iOS, Solid on Android)
-          const Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: AdaptiveTopBar(
-              customContent: DashboardHeader(),
-            ),
-          ),
+    return AdaptiveScrollPage(
+      title: 'October 2026',
+      largeTitle: const DashboardMonthTitle(monthYearText: 'October 2026'),
+      leading: const DashboardAvatarButton(),
+      actions: const [DashboardSyncButton()],
+      hasAddButton: true,
+      children: [
+        const TotalSpentCard(),
+        const SizedBox(height: 12.0),
+        const CategorySpendCard(),
+        const SizedBox(height: 12.0),
+        const CreditCardDueCard(),
+        const SizedBox(height: 20.0),
+        SectionHeader(
+          title: 'Recent Expenses',
+          actionLabel: 'View all',
+          fontSize: 12.0,
+          onAction: () => context.go('/expenses'),
+        ),
+        const SizedBox(height: 8.0),
+        for (final exp in recentExpenses) ...[
+          _buildExpenseTile(exp, cards, appColors),
+          const SizedBox(height: 8.0),
         ],
-      ),
-      floatingActionButton: AdaptiveAddButton(
-        onPressed: () => context.push('/add-expense'),
-      ),
+      ],
     );
   }
 

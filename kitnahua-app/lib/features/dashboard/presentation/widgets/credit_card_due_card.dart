@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/theme/app_radii.dart';
+import '../../../../core/utils/date_helpers.dart';
 import '../../../../core/utils/money_formatter.dart';
 import '../../../../core/widgets/icon_tile.dart';
 import '../../data/dashboard_providers.dart';
@@ -25,6 +27,17 @@ class CreditCardDueCard extends ConsumerWidget {
       return const SizedBox.shrink();
     }
 
+    final now = ref.watch(clockProvider);
+    final statement = hdfcCard.lastStatement(now);
+    final daysLeft = DateHelpers.daysBetween(now, statement.dueDate);
+    final dueIn = switch (daysLeft) {
+      < 0 => 'overdue',
+      0 => 'due today',
+      1 => 'due tomorrow',
+      _ => 'due in $daysLeft days',
+    };
+    final dayMonth = DateFormat('d MMM');
+
     return Container(
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
@@ -45,8 +58,9 @@ class CreditCardDueCard extends ConsumerWidget {
               IconTile(
                 size: 36.0,
                 borderRadius: 12.0,
-                backgroundColor:
-                    theme.colorScheme.primary.withValues(alpha: 0.20),
+                backgroundColor: theme.colorScheme.primary.withValues(
+                  alpha: 0.20,
+                ),
                 icon: Icons.credit_card,
                 iconSize: 18.0,
                 iconColor: theme.colorScheme.primary,
@@ -57,7 +71,7 @@ class CreditCardDueCard extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'HDFC Millennia payment due in 3 days',
+                      '${hdfcCard.nickname} payment $dueIn',
                       style: TextStyle(
                         fontSize: 12.0,
                         fontWeight: FontWeight.w700,
@@ -72,7 +86,9 @@ class CreditCardDueCard extends ConsumerWidget {
                           color: theme.colorScheme.onSurfaceVariant,
                         ),
                         children: [
-                          const TextSpan(text: '7 Oct · '),
+                          TextSpan(
+                            text: '${dayMonth.format(statement.dueDate)} · ',
+                          ),
                           TextSpan(
                             text: MoneyFormatter.formatPaise(
                               hdfcCard.lastStatementAmountMinor,
@@ -118,7 +134,8 @@ class CreditCardDueCard extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  'Statement generated on 16 Sep',
+                  'Statement generated on '
+                  '${dayMonth.format(statement.billDate)}',
                   style: TextStyle(
                     fontSize: 11.0,
                     color: theme.colorScheme.onSurfaceVariant,
@@ -145,10 +162,7 @@ class CreditCardDueCard extends ConsumerWidget {
                 icon: const Icon(Icons.check_circle_outline, size: 14.0),
                 label: const Text(
                   'Mark as paid',
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.w600),
                 ),
               ),
             ],

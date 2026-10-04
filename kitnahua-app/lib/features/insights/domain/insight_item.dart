@@ -7,22 +7,22 @@ class InsightItem {
   const InsightItem({
     required this.id,
     required this.icon,
-    required this.iconColorHex,
+    required this.categoryName,
     required this.title,
     required this.subtitle,
     required this.badgeText,
     required this.badgeVariant,
-    this.badgeCategoryColorHex,
     required this.body,
   });
 
   final String id;
   final IconData icon;
-  final int iconColorHex;
+
+  /// Category whose theme colour tints the icon (and a category badge).
+  final String categoryName;
   final String title;
   final String subtitle;
   final String badgeText;
   final MetricBadgeVariant badgeVariant;
-  final int? badgeCategoryColorHex;
   final String body;
 }

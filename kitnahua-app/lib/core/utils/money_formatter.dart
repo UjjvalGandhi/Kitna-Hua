@@ -23,13 +23,12 @@ abstract final class MoneyFormatter {
     bool showPaise = false,
     bool roundPaise = true,
     bool includeSymbol = true,
-  }) =>
-      format(
-        paiseMinor,
-        showPaise: showPaise,
-        roundPaise: roundPaise,
-        includeSymbol: includeSymbol,
-      );
+  }) => format(
+    paiseMinor,
+    showPaise: showPaise,
+    roundPaise: roundPaise,
+    includeSymbol: includeSymbol,
+  );
 
   static String format(
     int paiseMinor, {
@@ -80,13 +79,19 @@ abstract final class MoneyFormatter {
 
     final String result;
     if (absRupees >= 10000000) {
-      final cr = (absRupees / 10000000.0).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+      final cr = (absRupees / 10000000.0)
+          .toStringAsFixed(1)
+          .replaceAll(RegExp(r'\.0$'), '');
       result = '${cr}Cr';
     } else if (absRupees >= 100000) {
-      final l = (absRupees / 100000.0).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+      final l = (absRupees / 100000.0)
+          .toStringAsFixed(1)
+          .replaceAll(RegExp(r'\.0$'), '');
       result = '${l}L';
     } else if (absRupees >= 1000) {
-      final k = (absRupees / 1000.0).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+      final k = (absRupees / 1000.0)
+          .toStringAsFixed(1)
+          .replaceAll(RegExp(r'\.0$'), '');
       result = '${k}k';
     } else {
       result = absRupees.toString();

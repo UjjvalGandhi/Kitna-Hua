@@ -25,13 +25,14 @@ class InsightsNotifier extends AsyncNotifier<List<InsightItem>> {
     final rentPercent = totalSpentMinor > 0
         ? ((rentSpendMinor / totalSpentMinor) * 100).round()
         : 41;
-    final groceryPercent = ((grocerySpendMinor / groceryBudgetMinor) * 100).round();
+    final groceryPercent = ((grocerySpendMinor / groceryBudgetMinor) * 100)
+        .round();
 
     return [
       const InsightItem(
         id: 'dining_spend',
         icon: Icons.restaurant_outlined,
-        iconColorHex: 0xFF006A60,
+        categoryName: 'Food & Dining',
         title: 'Dining Spend Down',
         subtitle: 'Food & Dining',
         badgeText: '-₹3,200 vs Sep',
@@ -42,19 +43,18 @@ class InsightsNotifier extends AsyncNotifier<List<InsightItem>> {
       InsightItem(
         id: 'rent_spend',
         icon: Icons.home_outlined,
-        iconColorHex: 0xFF546E7A,
+        categoryName: 'Rent',
         title: 'Rent is $rentPercent% of spend',
         subtitle: 'Rent',
         badgeText: '$rentPercent% of total',
         badgeVariant: MetricBadgeVariant.category,
-        badgeCategoryColorHex: 0xFF546E7A,
         body:
             '₹22,000 paid on 1 Oct accounts for 40.6% of your total expenditure this month. Spends normalize after week 1.',
       ),
       InsightItem(
         id: 'grocery_spend',
         icon: Icons.shopping_cart_outlined,
-        iconColorHex: 0xFF2E7D32,
+        categoryName: 'Groceries',
         title: 'Grocery Spend on Track',
         subtitle: 'BigBasket & Instamart',
         badgeText: '$groceryPercent% utilized',
@@ -65,7 +65,7 @@ class InsightsNotifier extends AsyncNotifier<List<InsightItem>> {
       const InsightItem(
         id: 'top_merchant',
         icon: Icons.storefront_outlined,
-        iconColorHex: 0xFF006A60,
+        categoryName: 'Food & Dining',
         title: 'Top merchant: Swiggy',
         subtitle: '9 orders · ₹3,850',
         badgeText: '₹428 avg',
@@ -87,5 +87,5 @@ class InsightsNotifier extends AsyncNotifier<List<InsightItem>> {
 
 final insightsProvider =
     AsyncNotifierProvider<InsightsNotifier, List<InsightItem>>(
-  InsightsNotifier.new,
-);
+      InsightsNotifier.new,
+    );

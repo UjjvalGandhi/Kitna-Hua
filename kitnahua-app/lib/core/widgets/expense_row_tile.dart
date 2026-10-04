@@ -94,9 +94,7 @@ class ExpenseRowTile extends StatelessWidget {
             children: [
               Text(
                 MoneyFormatter.formatPaise(amountMinor),
-                style: theme.textTheme.labelMedium
-                    ?.withTabularFigures
-                    .copyWith(
+                style: theme.textTheme.labelMedium?.withTabularFigures.copyWith(
                   fontSize: 12.0,
                   fontWeight: FontWeight.w700,
                   color: theme.colorScheme.onSurface,

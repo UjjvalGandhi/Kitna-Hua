@@ -9,9 +9,5 @@ void main() {
   // Disable runtime fetching so font loads offline from bundled assets on first launch
   GoogleFonts.config.allowRuntimeFetching = false;
 
-  runApp(
-    const ProviderScope(
-      child: KitnaHuaApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: KitnaHuaApp()));
 }

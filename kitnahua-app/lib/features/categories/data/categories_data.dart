@@ -63,9 +63,6 @@ abstract final class CategoriesData {
   ];
 
   static ExpenseCategory findById(String id) {
-    return all.firstWhere(
-      (c) => c.id == id,
-      orElse: () => food,
-    );
+    return all.firstWhere((c) => c.id == id, orElse: () => food);
   }
 }

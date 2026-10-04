@@ -11,9 +11,12 @@ void main() {
       expect(MoneyFormatter.format(45000), equals('₹450'));
     });
 
-    test('formats ₹1,23,450 (12345000 paise) correctly with Indian grouping', () {
-      expect(MoneyFormatter.format(12345000), equals('₹1,23,450'));
-    });
+    test(
+      'formats ₹1,23,450 (12345000 paise) correctly with Indian grouping',
+      () {
+        expect(MoneyFormatter.format(12345000), equals('₹1,23,450'));
+      },
+    );
 
     test('handles paise rounding correctly', () {
       // 450.50 rupees -> rounds up to 451
@@ -31,7 +34,10 @@ void main() {
 
     test('formats with paise when showPaise is true', () {
       expect(MoneyFormatter.format(45050, showPaise: true), equals('₹450.50'));
-      expect(MoneyFormatter.format(12345075, showPaise: true), equals('₹1,23,450.75'));
+      expect(
+        MoneyFormatter.format(12345075, showPaise: true),
+        equals('₹1,23,450.75'),
+      );
       expect(MoneyFormatter.format(0, showPaise: true), equals('₹0.00'));
     });
 

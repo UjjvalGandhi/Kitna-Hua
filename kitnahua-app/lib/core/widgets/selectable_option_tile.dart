@@ -109,11 +109,7 @@ class SelectableOptionTile extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(
-              radioIcon,
-              size: 20.0,
-              color: radioColor,
-            ),
+            Icon(radioIcon, size: 20.0, color: radioColor),
           ],
         ),
       ),

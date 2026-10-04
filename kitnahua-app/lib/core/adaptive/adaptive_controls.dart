@@ -32,10 +32,7 @@ class AdaptiveSwitch extends ConsumerWidget {
       );
     }
 
-    return Switch(
-      value: value,
-      onChanged: onChanged,
-    );
+    return Switch(value: value, onChanged: onChanged);
   }
 }
 

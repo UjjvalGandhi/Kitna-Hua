@@ -1,26 +1,29 @@
+import 'package:cupertino_native_better/cupertino_native_better.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/app_radii.dart';
-import 'glass_surface.dart';
+import 'native_tap_fallback.dart';
 import 'platform_info.dart';
 
-/// Adaptive Add button:
-/// - Android: Extended FAB "Add Expense" with primary background and onPrimary text/icon.
-/// - iOS 26+: Glass circular 56x56 "+" button floating above the tab bar,
-///   rendered in 20% primary-tinted glass with blur sigma 20 and highlight border.
-/// - iOS < 26 or Reduce Transparency ON: Solid circular button with
-///   surfaceContainer background and primary icon.
-///
-/// Triggers light haptic feedback on iOS when pressed.
+/// Adaptive Add button. It never positions itself; the parent decides where
+/// it sits ([AdaptiveTabScaffold] places it).
+/// - Android: Extended FAB "Add Expense".
+/// - iOS 26+: native Liquid Glass circle with a primary-tinted "plus" symbol,
+///   sized by [size] so it matches the glass tab bar height exactly.
+/// - iOS < 26 or Reduce Transparency ON: solid circular button.
 class AdaptiveAddButton extends ConsumerWidget {
   const AdaptiveAddButton({
     super.key,
     required this.onPressed,
+    this.size = 56.0,
   });
 
   final VoidCallback onPressed;
+
+  /// Diameter of the circular iOS variants.
+  final double size;
 
   void _handleTap(PlatformInfo platformInfo) {
     if (platformInfo.isIOS) {
@@ -46,77 +49,84 @@ class AdaptiveAddButton extends ConsumerWidget {
         icon: const Icon(Icons.add, size: 20.0),
         label: const Text(
           'Add Expense',
-          style: TextStyle(
-            fontSize: 12.0,
-            fontWeight: FontWeight.w700,
-          ),
+          style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.w700),
         ),
       );
     }
 
-    // iOS circular floating "+" button
-    final isLiquidGlass = platformInfo.useLiquidGlass;
+    if (platformInfo.useLiquidGlass) {
+      return _GlassAddButton(
+        size: size,
+        tint: theme.colorScheme.primary,
+        onPressed: () => _handleTap(platformInfo),
+      );
+    }
 
-    if (isLiquidGlass) {
-      return Container(
-        width: 56.0,
-        height: 56.0,
-        margin: const EdgeInsets.only(bottom: 24.0, right: 4.0),
-        child: GlassSurface(
-          borderRadius: BorderRadius.circular(28.0),
-          tintOpacity: 0.20, // Primary-tinted glass at 20%
-          borderColor: theme.colorScheme.primary.withValues(alpha: 0.40),
-          glowColor: theme.colorScheme.primary.withValues(alpha: 0.25),
-          glowRadius: 20.0,
-          fallbackColor: theme.colorScheme.surfaceContainer,
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: () => _handleTap(platformInfo),
-              borderRadius: BorderRadius.circular(28.0),
-              child: Center(
-                child: Icon(
-                  Icons.add,
-                  size: 28.0,
-                  color: theme.colorScheme.primary,
-                ),
-              ),
+    // iOS < 26 or Reduce Transparency ON: solid circle.
+    return Semantics(
+      button: true,
+      label: 'Add Expense',
+      child: Material(
+        color: theme.colorScheme.primary,
+        shape: const CircleBorder(),
+        elevation: 3.0,
+        child: InkWell(
+          onTap: () => _handleTap(platformInfo),
+          customBorder: const CircleBorder(),
+          child: SizedBox.square(
+            dimension: size,
+            child: Icon(
+              Icons.add,
+              size: 24.0,
+              color: theme.colorScheme.onPrimary,
             ),
           ),
         ),
-      );
-    }
-
-    // iOS Reduce Transparency or iOS < 26: Solid surfaceContainer button
-    return Container(
-      width: 56.0,
-      height: 56.0,
-      margin: const EdgeInsets.only(bottom: 24.0, right: 4.0),
-      decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceContainer,
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: theme.colorScheme.outlineVariant.withValues(alpha: 0.60),
-          width: 1.0,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.12),
-            blurRadius: 10.0,
-            offset: const Offset(0, 4),
-          ),
-        ],
       ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: () => _handleTap(platformInfo),
-          borderRadius: BorderRadius.circular(28.0),
-          child: Center(
-            child: Icon(
-              Icons.add,
-              size: 28.0,
-              color: theme.colorScheme.primary,
+    );
+  }
+}
+
+/// Native Liquid Glass "+" circle. Native touches keep the glass press effect;
+/// [NativeTapFallback] catches short taps the native button drops, and
+/// [TapDeduper] prevents opening the screen twice.
+class _GlassAddButton extends StatefulWidget {
+  const _GlassAddButton({
+    required this.size,
+    required this.tint,
+    required this.onPressed,
+  });
+
+  final double size;
+  final Color tint;
+  final VoidCallback onPressed;
+
+  @override
+  State<_GlassAddButton> createState() => _GlassAddButtonState();
+}
+
+class _GlassAddButtonState extends State<_GlassAddButton> {
+  final _deduper = TapDeduper(window: const Duration(milliseconds: 800));
+
+  void _press() => _deduper.run(#add, widget.onPressed);
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      button: true,
+      label: 'Add Expense',
+      child: NativeTapFallback(
+        onTap: (_) => _press(),
+        child: SizedBox.square(
+          dimension: widget.size,
+          child: CNButton.icon(
+            icon: const CNSymbol('plus', size: 20.0),
+            tint: widget.tint,
+            onPressed: _press,
+            config: CNButtonConfig(
+              style: CNButtonStyle.glass,
+              width: widget.size,
+              minHeight: widget.size,
             ),
           ),
         ),
