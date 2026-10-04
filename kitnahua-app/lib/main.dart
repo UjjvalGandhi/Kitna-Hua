@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'app.dart';
 
 void main() {
-  runApp(const MainApp());
-}
+  WidgetsFlutterBinding.ensureInitialized();
+  // Disable runtime fetching so font loads offline from bundled assets on first launch
+  GoogleFonts.config.allowRuntimeFetching = false;
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  runApp(
+    const ProviderScope(
+      child: KitnaHuaApp(),
+    ),
+  );
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Material Symbols Outlined -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,42 +33,53 @@
       vertical-align: middle;
       line-height: 1;
     }
+
     .material-symbols-outlined.fill {
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
+
     .tabular-nums {
       font-variant-numeric: tabular-nums;
     }
+
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
+
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
   </style>
 </head>
+
 <body class="bg-[#EDF0EE] text-[#191C1B] font-sans p-6 md:p-10 min-h-screen">
 
   <!-- Header & Controls -->
-  <header class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-8 border-b border-[#BFC9C5] gap-4">
+  <header
+    class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-8 border-b border-[#BFC9C5] gap-4">
     <div>
       <div class="flex items-center gap-3">
         <span class="material-symbols-outlined text-[#006A60] text-3xl">account_balance_wallet</span>
-        <h1 class="text-2xl font-bold tracking-tight text-[#191C1B]">Kharcha AI <span class="text-sm font-normal text-[#3F4947]">· Credit Card Bill Reminder Suite</span></h1>
+        <h1 class="text-2xl font-bold tracking-tight text-[#191C1B]">Kharcha AI <span
+            class="text-sm font-normal text-[#3F4947]">· Credit Card Bill Reminder Suite</span></h1>
       </div>
-      <p class="text-xs text-[#3F4947] mt-1">Tokens + Screens 03, 04, 04A (Method Sheet), 04B (Add Card), 04C (Permission), 10, Cards Screen & Android Notifications</p>
+      <p class="text-xs text-[#3F4947] mt-1">Tokens + Screens 03, 04, 04A (Method Sheet), 04B (Add Card), 04C
+        (Permission), 10, Cards Screen & Android Notifications</p>
     </div>
 
     <!-- Theme View Switcher -->
     <div class="flex items-center gap-1.5 bg-[#FAFDFB] p-1.5 rounded-full border border-[#BFC9C5] text-xs">
-      <button onclick="setViewMode('all')" id="btn-all" class="min-h-[48px] px-4 rounded-full font-semibold bg-[#EDF0EE] text-[#191C1B] transition-all">
+      <button onclick="setViewMode('all')" id="btn-all"
+        class="min-h-[48px] px-4 rounded-full font-semibold bg-[#EDF0EE] text-[#191C1B] transition-all">
         Both Side-by-Side
       </button>
-      <button onclick="setViewMode('light')" id="btn-light" class="min-h-[48px] px-4 rounded-full font-medium text-[#3F4947] hover:text-[#191C1B] transition-all flex items-center gap-1">
+      <button onclick="setViewMode('light')" id="btn-light"
+        class="min-h-[48px] px-4 rounded-full font-medium text-[#3F4947] hover:text-[#191C1B] transition-all flex items-center gap-1">
         <span class="material-symbols-outlined text-sm">light_mode</span> Light Only
       </button>
-      <button onclick="setViewMode('dark')" id="btn-dark" class="min-h-[48px] px-4 rounded-full font-medium text-[#3F4947] hover:text-[#191C1B] transition-all flex items-center gap-1">
+      <button onclick="setViewMode('dark')" id="btn-dark"
+        class="min-h-[48px] px-4 rounded-full font-medium text-[#3F4947] hover:text-[#191C1B] transition-all flex items-center gap-1">
         <span class="material-symbols-outlined text-sm">dark_mode</span> Dark Only
       </button>
     </div>
@@ -76,7 +89,8 @@
   <section class="max-w-7xl mx-auto my-10 space-y-8">
     <div class="flex items-center gap-2">
       <span class="material-symbols-outlined text-[#006A60]">palette</span>
-      <h2 class="text-sm font-bold tracking-wider uppercase text-[#3F4947]">Design Tokens (Flutter ColorScheme & ThemeData Mapping)</h2>
+      <h2 class="text-sm font-bold tracking-wider uppercase text-[#3F4947]">Design Tokens (Flutter ColorScheme &
+        ThemeData Mapping)</h2>
     </div>
 
     <!-- M3 Semantic Core Roles -->
@@ -84,8 +98,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">colorScheme.primary</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#006A60] flex items-center justify-center text-[11px] text-white font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#53DBC9] flex items-center justify-center text-[11px] text-[#003731] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#006A60] flex items-center justify-center text-[11px] text-white font-bold">L
+          </div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#53DBC9] flex items-center justify-center text-[11px] text-[#003731] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#006A60 / #53DBC9</div>
       </div>
@@ -93,8 +111,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">colorScheme.surface</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#FAFDFB] border border-[#BFC9C5] flex items-center justify-center text-[11px] text-[#191C1B] font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#101413] flex items-center justify-center text-[11px] text-[#E1E3E2] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#FAFDFB] border border-[#BFC9C5] flex items-center justify-center text-[11px] text-[#191C1B] font-bold">
+            L</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#101413] flex items-center justify-center text-[11px] text-[#E1E3E2] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#FAFDFB / #101413</div>
       </div>
@@ -102,8 +124,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">surfaceContainer</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#EDF0EE] border border-[#BFC9C5] flex items-center justify-center text-[11px] text-[#191C1B] font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#1C201F] flex items-center justify-center text-[11px] text-[#E1E3E2] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#EDF0EE] border border-[#BFC9C5] flex items-center justify-center text-[11px] text-[#191C1B] font-bold">
+            L</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#1C201F] flex items-center justify-center text-[11px] text-[#E1E3E2] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#EDF0EE / #1C201F</div>
       </div>
@@ -111,8 +137,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">colorScheme.error</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#BA1A1A] text-white flex items-center justify-center text-[11px] font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#FFB4AB] text-[#690005] flex items-center justify-center text-[11px] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#BA1A1A] text-white flex items-center justify-center text-[11px] font-bold">L
+          </div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#FFB4AB] text-[#690005] flex items-center justify-center text-[11px] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#BA1A1A / #FFB4AB</div>
       </div>
@@ -120,8 +150,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">Semantic Success</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#186C45] text-white flex items-center justify-center text-[11px] font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#73DA9E] text-[#00391F] flex items-center justify-center text-[11px] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#186C45] text-white flex items-center justify-center text-[11px] font-bold">L
+          </div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#73DA9E] text-[#00391F] flex items-center justify-center text-[11px] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#186C45 / #73DA9E</div>
       </div>
@@ -129,8 +163,12 @@
       <div class="p-3.5 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <div class="text-[11px] font-bold text-[#3F4947]">Semantic Warning</div>
         <div class="flex gap-2 items-center">
-          <div class="w-8 h-8 rounded-lg bg-[#935800] text-white flex items-center justify-center text-[11px] font-bold">L</div>
-          <div class="w-8 h-8 rounded-lg bg-[#FFB77A] text-[#4F2500] flex items-center justify-center text-[11px] font-bold">D</div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#935800] text-white flex items-center justify-center text-[11px] font-bold">L
+          </div>
+          <div
+            class="w-8 h-8 rounded-lg bg-[#FFB77A] text-[#4F2500] flex items-center justify-center text-[11px] font-bold">
+            D</div>
         </div>
         <div class="text-[11px] font-mono text-[#3F4947]">#935800 / #FFB77A</div>
       </div>
@@ -142,42 +180,50 @@
       <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Food & Dining</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#D95D39]"></span><span class="w-4 h-4 rounded-full bg-[#FF8A65]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#D95D39]"></span><span
+              class="w-4 h-4 rounded-full bg-[#FF8A65]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#D95D39<br>#FF8A65</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Groceries</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#2E7D32]"></span><span class="w-4 h-4 rounded-full bg-[#81C784]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#2E7D32]"></span><span
+              class="w-4 h-4 rounded-full bg-[#81C784]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#2E7D32<br>#81C784</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Transport</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#0288D1]"></span><span class="w-4 h-4 rounded-full bg-[#4FC3F7]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#0288D1]"></span><span
+              class="w-4 h-4 rounded-full bg-[#4FC3F7]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#0288D1<br>#4FC3F7</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Rent</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#6A1B9A]"></span><span class="w-4 h-4 rounded-full bg-[#BA68C8]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#6A1B9A]"></span><span
+              class="w-4 h-4 rounded-full bg-[#BA68C8]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#6A1B9A<br>#BA68C8</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Utilities</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#E65100]"></span><span class="w-4 h-4 rounded-full bg-[#FFB74D]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#E65100]"></span><span
+              class="w-4 h-4 rounded-full bg-[#FFB74D]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#E65100<br>#FFB74D</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Entertainment</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#C2185B]"></span><span class="w-4 h-4 rounded-full bg-[#F06292]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#C2185B]"></span><span
+              class="w-4 h-4 rounded-full bg-[#F06292]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#C2185B<br>#F06292</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Health</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#00897B]"></span><span class="w-4 h-4 rounded-full bg-[#4DB6AC]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#00897B]"></span><span
+              class="w-4 h-4 rounded-full bg-[#4DB6AC]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#00897B<br>#4DB6AC</div>
         </div>
         <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-1.5">
           <div class="text-[11px] font-semibold text-[#191C1B]">Shopping</div>
-          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#546E7A]"></span><span class="w-4 h-4 rounded-full bg-[#90A4AE]"></span></div>
+          <div class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-[#546E7A]"></span><span
+              class="w-4 h-4 rounded-full bg-[#90A4AE]"></span></div>
           <div class="text-[11px] font-mono text-[#3F4947]">#546E7A<br>#90A4AE</div>
         </div>
       </div>
@@ -186,46 +232,81 @@
     <!-- Type Scale, Spacing, Radii, Elevation Specification -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       <div class="p-4 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
-        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Type Scale (Min 12px / 11px Label)</span>
+        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Type Scale (Min 12px / 11px
+          Label)</span>
         <div class="space-y-1.5 pt-1 text-xs">
-          <div class="flex justify-between items-baseline"><span class="text-xl font-bold">display</span><span class="text-[#3F4947] text-[11px]">32px / 700</span></div>
-          <div class="flex justify-between items-baseline"><span class="text-base font-semibold">headline</span><span class="text-[#3F4947] text-[11px]">24px / 600</span></div>
-          <div class="flex justify-between items-baseline"><span class="text-sm font-medium">title</span><span class="text-[#3F4947] text-[11px]">18px / 600</span></div>
-          <div class="flex justify-between items-baseline"><span class="text-xs font-normal">body</span><span class="text-[#3F4947] text-[11px]">14px / 400</span></div>
-          <div class="flex justify-between items-baseline"><span class="text-[11px] font-medium">label</span><span class="text-[#3F4947] text-[11px]">11px / 500</span></div>
+          <div class="flex justify-between items-baseline"><span class="text-xl font-bold">display</span><span
+              class="text-[#3F4947] text-[11px]">32px / 700</span></div>
+          <div class="flex justify-between items-baseline"><span class="text-base font-semibold">headline</span><span
+              class="text-[#3F4947] text-[11px]">24px / 600</span></div>
+          <div class="flex justify-between items-baseline"><span class="text-sm font-medium">title</span><span
+              class="text-[#3F4947] text-[11px]">18px / 600</span></div>
+          <div class="flex justify-between items-baseline"><span class="text-xs font-normal">body</span><span
+              class="text-[#3F4947] text-[11px]">14px / 400</span></div>
+          <div class="flex justify-between items-baseline"><span class="text-[11px] font-medium">label</span><span
+              class="text-[#3F4947] text-[11px]">11px / 500</span></div>
         </div>
       </div>
 
       <div class="p-4 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
-        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Spacing (4 / 8 / 12 / 16 / 24 / 32)</span>
+        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Spacing (4 / 8 / 12 / 16 / 24 /
+          32)</span>
         <div class="grid grid-cols-3 gap-2 text-center pt-1 text-xs">
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">4dp</div><div class="text-[11px] text-[#3F4947]">0.5x</div></div>
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">8dp</div><div class="text-[11px] text-[#3F4947]">1x</div></div>
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">12dp</div><div class="text-[11px] text-[#3F4947]">1.5x</div></div>
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">16dp</div><div class="text-[11px] text-[#3F4947]">2x</div></div>
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">24dp</div><div class="text-[11px] text-[#3F4947]">3x</div></div>
-          <div class="p-2 bg-[#EDF0EE] rounded-xl"><div class="font-mono font-bold">32dp</div><div class="text-[11px] text-[#3F4947]">4x</div></div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">4dp</div>
+            <div class="text-[11px] text-[#3F4947]">0.5x</div>
+          </div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">8dp</div>
+            <div class="text-[11px] text-[#3F4947]">1x</div>
+          </div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">12dp</div>
+            <div class="text-[11px] text-[#3F4947]">1.5x</div>
+          </div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">16dp</div>
+            <div class="text-[11px] text-[#3F4947]">2x</div>
+          </div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">24dp</div>
+            <div class="text-[11px] text-[#3F4947]">3x</div>
+          </div>
+          <div class="p-2 bg-[#EDF0EE] rounded-xl">
+            <div class="font-mono font-bold">32dp</div>
+            <div class="text-[11px] text-[#3F4947]">4x</div>
+          </div>
         </div>
       </div>
 
       <div class="p-4 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
-        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Radii (8 / 12 / 16 / 24 / Full)</span>
+        <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Radii (8 / 12 / 16 / 24 /
+          Full)</span>
         <div class="space-y-1.5 pt-1 text-xs">
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">sm</span><span class="font-mono text-[#3F4947]">8dp (Keypad/Cards)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">md</span><span class="font-mono text-[#3F4947]">12dp (Inputs)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">lg</span><span class="font-mono text-[#3F4947]">16dp (Containers)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">xl</span><span class="font-mono text-[#3F4947]">24dp (Big Cards/Sheet)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">full</span><span class="font-mono text-[#3F4947]">9999dp (Chips/Pills)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">sm</span><span
+              class="font-mono text-[#3F4947]">8dp (Keypad/Cards)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">md</span><span
+              class="font-mono text-[#3F4947]">12dp (Inputs)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">lg</span><span
+              class="font-mono text-[#3F4947]">16dp (Containers)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">xl</span><span
+              class="font-mono text-[#3F4947]">24dp (Big Cards/Sheet)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">full</span><span
+              class="font-mono text-[#3F4947]">9999dp (Chips/Pills)</span></div>
         </div>
       </div>
 
       <div class="p-4 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5] space-y-2">
         <span class="font-bold text-[#3F4947] uppercase text-[11px] tracking-wider">Elevation Levels (0 – 3)</span>
         <div class="space-y-1.5 pt-1 text-xs">
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 0</span><span class="font-mono text-[#3F4947]">0dp (Flat surface)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 1</span><span class="font-mono text-[#3F4947]">1dp (Subtle list row)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 2</span><span class="font-mono text-[#3F4947]">3dp (Container card)</span></div>
-          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 3</span><span class="font-mono text-[#3F4947]">6dp (Floating FAB)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 0</span><span
+              class="font-mono text-[#3F4947]">0dp (Flat surface)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 1</span><span
+              class="font-mono text-[#3F4947]">1dp (Subtle list row)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 2</span><span
+              class="font-mono text-[#3F4947]">3dp (Container card)</span></div>
+          <div class="flex justify-between items-center"><span class="text-[#191C1B]">Level 3</span><span
+              class="font-mono text-[#3F4947]">6dp (Floating FAB)</span></div>
         </div>
       </div>
     </div>
@@ -253,21 +334,24 @@
           <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/60 shadow-sm space-y-1.5">
             <div class="flex items-center justify-between text-[11px] text-[#3F4947]">
               <div class="flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-[#006A60] text-white flex items-center justify-center text-[9px] font-bold">K</span>
+                <span
+                  class="w-4 h-4 rounded-full bg-[#006A60] text-white flex items-center justify-center text-[9px] font-bold">K</span>
                 <span class="font-semibold text-[#191C1B]">Kharcha AI</span>
                 <span>·</span>
                 <span>Just now</span>
               </div>
               <span class="material-symbols-outlined text-sm">expand_more</span>
             </div>
-            <div class="text-xs font-bold text-[#191C1B]">HDFC Millennia bill generated · ₹12,340 tracked this cycle</div>
+            <div class="text-xs font-bold text-[#191C1B]">HDFC Millennia bill generated · ₹12,340 tracked this cycle
+            </div>
             <div class="text-[11px] text-[#3F4947]">Cycle: 16 Sep – 15 Oct · Due 5 Nov (in 21 days)</div>
           </div>
           <!-- Banner 2: Due in 3 days -->
           <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/60 shadow-sm space-y-2">
             <div class="flex items-center justify-between text-[11px] text-[#3F4947]">
               <div class="flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-[#006A60] text-white flex items-center justify-center text-[9px] font-bold">K</span>
+                <span
+                  class="w-4 h-4 rounded-full bg-[#006A60] text-white flex items-center justify-center text-[9px] font-bold">K</span>
                 <span class="font-semibold text-[#191C1B]">Kharcha AI</span>
                 <span>·</span>
                 <span>9:00 AM</span>
@@ -277,8 +361,11 @@
             <div class="text-xs font-bold text-[#191C1B]">HDFC Millennia payment due in 3 days (8 Oct)</div>
             <div class="text-[11px] text-[#3F4947]">₹12,340 tracked this cycle. Tap to review tracked card spends.</div>
             <div class="flex gap-2 pt-1">
-              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#006A60] text-white text-xs font-semibold">Mark as paid</button>
-              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#FAFDFB] border border-[#BFC9C5] text-xs font-semibold text-[#191C1B]">View expenses</button>
+              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#006A60] text-white text-xs font-semibold">Mark as
+                paid</button>
+              <button
+                class="min-h-[48px] px-3.5 rounded-xl bg-[#FAFDFB] border border-[#BFC9C5] text-xs font-semibold text-[#191C1B]">View
+                expenses</button>
             </div>
           </div>
         </div>
@@ -292,7 +379,8 @@
           <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/60 shadow-sm space-y-1.5">
             <div class="flex items-center justify-between text-[11px] text-[#BFC9C5]">
               <div class="flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-[#53DBC9] text-[#003731] flex items-center justify-center text-[9px] font-bold">K</span>
+                <span
+                  class="w-4 h-4 rounded-full bg-[#53DBC9] text-[#003731] flex items-center justify-center text-[9px] font-bold">K</span>
                 <span class="font-semibold text-white">Kharcha AI</span>
                 <span>·</span>
                 <span>Just now</span>
@@ -306,7 +394,8 @@
           <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/60 shadow-sm space-y-2">
             <div class="flex items-center justify-between text-[11px] text-[#BFC9C5]">
               <div class="flex items-center gap-1.5">
-                <span class="w-4 h-4 rounded-full bg-[#53DBC9] text-[#003731] flex items-center justify-center text-[9px] font-bold">K</span>
+                <span
+                  class="w-4 h-4 rounded-full bg-[#53DBC9] text-[#003731] flex items-center justify-center text-[9px] font-bold">K</span>
                 <span class="font-semibold text-white">Kharcha AI</span>
                 <span>·</span>
                 <span>9:00 AM</span>
@@ -316,8 +405,11 @@
             <div class="text-xs font-bold text-white">HDFC Millennia payment due in 3 days (8 Oct)</div>
             <div class="text-[11px] text-[#BFC9C5]">₹12,340 tracked this cycle. Tap to review tracked card spends.</div>
             <div class="flex gap-2 pt-1">
-              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#53DBC9] text-[#003731] text-xs font-bold">Mark as paid</button>
-              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#101413] border border-[#3F4947] text-xs font-semibold text-white">View expenses</button>
+              <button class="min-h-[48px] px-3.5 rounded-xl bg-[#53DBC9] text-[#003731] text-xs font-bold">Mark as
+                paid</button>
+              <button
+                class="min-h-[48px] px-3.5 rounded-xl bg-[#101413] border border-[#3F4947] text-xs font-semibold text-white">View
+                expenses</button>
             </div>
           </div>
         </div>
@@ -330,20 +422,24 @@
     <!-- ================================================================= -->
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
-        <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 03 Update (Features E & G)</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Dashboard · With Dismissible Credit Card Due Card & "HDFC ••4821" Row</h2>
+        <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 03 Update (Features E &
+          G)</span>
+        <h2 class="text-lg font-bold text-[#191C1B]">Dashboard · With Dismissible Credit Card Due Card & "HDFC ••4821"
+          Row</h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 03 (LIGHT MODE) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -355,13 +451,16 @@
             <!-- App Bar -->
             <div class="px-5 py-1.5 flex items-center justify-between shrink-0">
               <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full bg-[#006A60] text-white font-bold text-xs flex items-center justify-center">UG</div>
+                <div
+                  class="w-8 h-8 rounded-full bg-[#006A60] text-white font-bold text-xs flex items-center justify-center">
+                  UG</div>
                 <button class="min-h-[48px] flex items-center gap-1 text-sm font-semibold text-[#191C1B]">
                   <span>October 2026</span>
                   <span class="material-symbols-outlined text-base">expand_more</span>
                 </button>
               </div>
-              <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5] text-[11px] font-medium">
+              <div
+                class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5] text-[11px] font-medium">
                 <span class="material-symbols-outlined text-[14px]">sync</span>
                 <span>2 pending sync</span>
               </div>
@@ -376,7 +475,8 @@
                     <span class="text-[11px] font-medium text-[#3F4947]">Total Spent this Month</span>
                     <div class="text-3xl font-bold tracking-tight tabular-nums mt-0.5 text-[#191C1B]">₹54,230</div>
                   </div>
-                  <div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#186C45]/15 text-[#186C45] text-xs font-semibold">
+                  <div
+                    class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#186C45]/15 text-[#186C45] text-xs font-semibold">
                     <span class="material-symbols-outlined text-sm">trending_down</span>
                     <span>12% vs same days in Sep</span>
                   </div>
@@ -400,21 +500,25 @@
               <div class="p-3.5 rounded-2xl bg-[#006A60]/10 border border-[#006A60]/30 space-y-2">
                 <div class="flex items-start justify-between">
                   <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-xl bg-[#006A60]/20 text-[#006A60] flex items-center justify-center shrink-0">
+                    <div
+                      class="w-9 h-9 rounded-xl bg-[#006A60]/20 text-[#006A60] flex items-center justify-center shrink-0">
                       <span class="material-symbols-outlined text-lg">credit_card</span>
                     </div>
                     <div>
                       <div class="text-xs font-bold text-[#191C1B]">HDFC Millennia payment due in 3 days</div>
-                      <div class="text-[11px] text-[#3F4947]">8 Oct · <strong class="tabular-nums font-semibold text-[#191C1B]">₹12,340</strong> tracked this cycle</div>
+                      <div class="text-[11px] text-[#3F4947]">8 Oct · <strong
+                          class="tabular-nums font-semibold text-[#191C1B]">₹12,340</strong> tracked this cycle</div>
                     </div>
                   </div>
-                  <button class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
+                  <button
+                    class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
                     <span class="material-symbols-outlined text-base">close</span>
                   </button>
                 </div>
                 <div class="flex items-center justify-between pt-1 border-t border-[#006A60]/15">
                   <span class="text-[11px] text-[#3F4947]">Statement generated on 16 Sep</span>
-                  <button class="min-h-[48px] px-3 rounded-xl bg-[#006A60] text-white text-xs font-semibold flex items-center gap-1 shadow-sm">
+                  <button
+                    class="min-h-[48px] px-3 rounded-xl bg-[#006A60] text-white text-xs font-semibold flex items-center gap-1 shadow-sm">
                     <span class="material-symbols-outlined text-sm">check_circle</span>
                     <span>Mark as paid</span>
                   </button>
@@ -426,23 +530,34 @@
                 <h4 class="text-xs font-bold tracking-tight text-[#191C1B] uppercase">Recent Expenses</h4>
                 <button class="min-h-[48px] text-xs text-[#006A60] font-semibold flex items-center">View all</button>
               </div>
-              
+
               <!-- 5 Recent Expenses (BigBasket labeled HDFC ••4821) -->
               <div class="space-y-2">
                 <!-- 1 Swiggy -->
                 <div class="p-3 rounded-2xl bg-[#EDF0EE] flex items-center justify-between border border-[#BFC9C5]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center"><span class="material-symbols-outlined text-lg">restaurant</span></div>
-                    <div><div class="text-xs font-semibold text-[#191C1B]">Swiggy Dinner</div><div class="text-[11px] text-[#3F4947]">Food & Dining · Today</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">restaurant</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-[#191C1B]">Swiggy Dinner</div>
+                      <div class="text-[11px] text-[#3F4947]">Food & Dining · Today</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-[#191C1B]">₹450</div><div class="text-[11px] text-[#3F4947]">UPI · HDFC</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-[#191C1B]">₹450</div>
+                    <div class="text-[11px] text-[#3F4947]">UPI · HDFC</div>
+                  </div>
                 </div>
 
                 <!-- 2 BigBasket (FEATURE G: Card expense labeled "HDFC ••4821") -->
                 <div class="p-3 rounded-2xl bg-[#EDF0EE] flex items-center justify-between border border-[#BFC9C5]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#2E7D32]/15 text-[#2E7D32] flex items-center justify-center"><span class="material-symbols-outlined text-lg">shopping_cart</span></div>
-                    <div><div class="text-xs font-semibold text-[#191C1B]">BigBasket Weekly</div><div class="text-[11px] text-[#3F4947]">Groceries · Yesterday</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#2E7D32]/15 text-[#2E7D32] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">shopping_cart</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-[#191C1B]">BigBasket Weekly</div>
+                      <div class="text-[11px] text-[#3F4947]">Groceries · Yesterday</div>
+                    </div>
                   </div>
                   <div class="text-right">
                     <div class="text-xs font-bold tabular-nums text-[#191C1B]">₹1,840</div>
@@ -453,28 +568,49 @@
                 <!-- 3 Uber -->
                 <div class="p-3 rounded-2xl bg-[#EDF0EE] flex items-center justify-between border border-[#BFC9C5]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#0288D1]/15 text-[#0288D1] flex items-center justify-center"><span class="material-symbols-outlined text-lg">local_taxi</span></div>
-                    <div><div class="text-xs font-semibold text-[#191C1B]">Uber Go to Office</div><div class="text-[11px] text-[#3F4947]">Transport · Today</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#0288D1]/15 text-[#0288D1] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">local_taxi</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-[#191C1B]">Uber Go to Office</div>
+                      <div class="text-[11px] text-[#3F4947]">Transport · Today</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-[#191C1B]">₹280</div><div class="text-[11px] text-[#3F4947]">UPI · ICICI</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-[#191C1B]">₹280</div>
+                    <div class="text-[11px] text-[#3F4947]">UPI · ICICI</div>
+                  </div>
                 </div>
 
                 <!-- 4 BESCOM -->
                 <div class="p-3 rounded-2xl bg-[#EDF0EE] flex items-center justify-between border border-[#BFC9C5]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#E65100]/15 text-[#E65100] flex items-center justify-center"><span class="material-symbols-outlined text-lg">bolt</span></div>
-                    <div><div class="text-xs font-semibold text-[#191C1B]">BESCOM Electricity</div><div class="text-[11px] text-[#3F4947]">Utilities · 02 Oct</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#E65100]/15 text-[#E65100] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">bolt</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-[#191C1B]">BESCOM Electricity</div>
+                      <div class="text-[11px] text-[#3F4947]">Utilities · 02 Oct</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-[#191C1B]">₹1,420</div><div class="text-[11px] text-[#3F4947]">Auto-debit</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-[#191C1B]">₹1,420</div>
+                    <div class="text-[11px] text-[#3F4947]">Auto-debit</div>
+                  </div>
                 </div>
 
                 <!-- 5 Netflix -->
                 <div class="p-3 rounded-2xl bg-[#EDF0EE] flex items-center justify-between border border-[#BFC9C5]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#C2185B]/15 text-[#C2185B] flex items-center justify-center"><span class="material-symbols-outlined text-lg">movie</span></div>
-                    <div><div class="text-xs font-semibold text-[#191C1B]">Netflix India Sub</div><div class="text-[11px] text-[#3F4947]">Entertainment · 01 Oct</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#C2185B]/15 text-[#C2185B] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">movie</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-[#191C1B]">Netflix India Sub</div>
+                      <div class="text-[11px] text-[#3F4947]">Entertainment · 01 Oct</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-[#191C1B]">₹649</div><div class="text-[11px] font-semibold text-[#006A60]">HDFC ••4821</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-[#191C1B]">₹649</div>
+                    <div class="text-[11px] font-semibold text-[#006A60]">HDFC ••4821</div>
+                  </div>
                 </div>
               </div>
               <div class="h-14"></div>
@@ -482,22 +618,45 @@
 
             <!-- FAB -->
             <div class="absolute right-5 bottom-20 z-20">
-              <button class="min-h-[48px] px-5 py-3 rounded-2xl bg-[#006A60] text-white shadow-lg flex items-center gap-2">
+              <button
+                class="min-h-[48px] px-5 py-3 rounded-2xl bg-[#006A60] text-white shadow-lg flex items-center gap-2">
                 <span class="material-symbols-outlined text-xl">add</span>
                 <span class="text-xs font-bold tracking-wide">Add Expense</span>
               </button>
             </div>
 
             <!-- Bottom Nav Bar -->
-            <div class="h-16 px-4 bg-[#EDF0EE] border-t border-[#BFC9C5]/40 flex items-center justify-around shrink-0 z-10">
+            <div
+              class="h-16 px-4 bg-[#EDF0EE] border-t border-[#BFC9C5]/40 flex items-center justify-around shrink-0 z-10">
               <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5">
-                <div class="w-12 h-7 rounded-full bg-[#006A60]/15 text-[#006A60] flex items-center justify-center"><span class="material-symbols-outlined text-lg fill">dashboard</span></div>
+                <div class="w-12 h-7 rounded-full bg-[#006A60]/15 text-[#006A60] flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg fill">dashboard</span></div>
                 <span class="text-[11px] font-bold text-[#006A60]">Home</span>
               </button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">receipt_long</span></div><span class="text-[11px] font-medium">Expenses</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">pie_chart</span></div><span class="text-[11px] font-medium">Budgets</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">auto_awesome</span></div><span class="text-[11px] font-medium">Insights</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">credit_card</span></div><span class="text-[11px] font-medium">Cards</span></button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">receipt_long</span></div><span
+                  class="text-[11px] font-medium">Expenses</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">pie_chart</span></div><span
+                  class="text-[11px] font-medium">Budgets</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">auto_awesome</span></div><span
+                  class="text-[11px] font-medium">Insights</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">credit_card</span></div><span
+                  class="text-[11px] font-medium">Cards</span>
+              </button>
             </div>
 
             <!-- Gesture Bar -->
@@ -512,9 +671,11 @@
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -526,13 +687,16 @@
             <!-- App Bar -->
             <div class="px-5 py-1.5 flex items-center justify-between shrink-0">
               <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center">UG</div>
+                <div
+                  class="w-8 h-8 rounded-full bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center">
+                  UG</div>
                 <button class="min-h-[48px] flex items-center gap-1 text-sm font-semibold text-[#E1E3E2]">
                   <span>October 2026</span>
                   <span class="material-symbols-outlined text-base">expand_more</span>
                 </button>
               </div>
-              <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947] text-[11px] font-medium">
+              <div
+                class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947] text-[11px] font-medium">
                 <span class="material-symbols-outlined text-[14px]">sync</span>
                 <span>2 pending sync</span>
               </div>
@@ -547,7 +711,8 @@
                     <span class="text-[11px] font-medium text-[#BFC9C5]">Total Spent this Month</span>
                     <div class="text-3xl font-bold tracking-tight tabular-nums mt-0.5 text-white">₹54,230</div>
                   </div>
-                  <div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#73DA9E]/15 text-[#73DA9E] text-xs font-semibold">
+                  <div
+                    class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#73DA9E]/15 text-[#73DA9E] text-xs font-semibold">
                     <span class="material-symbols-outlined text-sm">trending_down</span>
                     <span>12% vs same days in Sep</span>
                   </div>
@@ -571,21 +736,25 @@
               <div class="p-3.5 rounded-2xl bg-[#53DBC9]/10 border border-[#53DBC9]/30 space-y-2">
                 <div class="flex items-start justify-between">
                   <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-xl bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center shrink-0">
+                    <div
+                      class="w-9 h-9 rounded-xl bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center shrink-0">
                       <span class="material-symbols-outlined text-lg">credit_card</span>
                     </div>
                     <div>
                       <div class="text-xs font-bold text-white">HDFC Millennia payment due in 3 days</div>
-                      <div class="text-[11px] text-[#BFC9C5]">8 Oct · <strong class="tabular-nums font-semibold text-white">₹12,340</strong> tracked this cycle</div>
+                      <div class="text-[11px] text-[#BFC9C5]">8 Oct · <strong
+                          class="tabular-nums font-semibold text-white">₹12,340</strong> tracked this cycle</div>
                     </div>
                   </div>
-                  <button class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#BFC9C5] hover:text-white">
+                  <button
+                    class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#BFC9C5] hover:text-white">
                     <span class="material-symbols-outlined text-base">close</span>
                   </button>
                 </div>
                 <div class="flex items-center justify-between pt-1 border-t border-[#53DBC9]/15">
                   <span class="text-[11px] text-[#BFC9C5]">Statement generated on 16 Sep</span>
-                  <button class="min-h-[48px] px-3 rounded-xl bg-[#53DBC9] text-[#003731] text-xs font-bold flex items-center gap-1 shadow-sm">
+                  <button
+                    class="min-h-[48px] px-3 rounded-xl bg-[#53DBC9] text-[#003731] text-xs font-bold flex items-center gap-1 shadow-sm">
                     <span class="material-symbols-outlined text-sm">check_circle</span>
                     <span>Mark as paid</span>
                   </button>
@@ -597,23 +766,34 @@
                 <h4 class="text-xs font-bold tracking-tight text-[#E1E3E2] uppercase">Recent Expenses</h4>
                 <button class="min-h-[48px] text-xs text-[#53DBC9] font-semibold flex items-center">View all</button>
               </div>
-              
+
               <!-- 5 Recent Expenses (BigBasket labeled HDFC ••4821) -->
               <div class="space-y-2">
                 <!-- 1 Swiggy -->
                 <div class="p-3 rounded-2xl bg-[#1C201F] flex items-center justify-between border border-[#3F4947]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center"><span class="material-symbols-outlined text-lg">restaurant</span></div>
-                    <div><div class="text-xs font-semibold text-white">Swiggy Dinner</div><div class="text-[11px] text-[#BFC9C5]">Food & Dining · Today</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">restaurant</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-white">Swiggy Dinner</div>
+                      <div class="text-[11px] text-[#BFC9C5]">Food & Dining · Today</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-white">₹450</div><div class="text-[11px] text-[#BFC9C5]">UPI · HDFC</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-white">₹450</div>
+                    <div class="text-[11px] text-[#BFC9C5]">UPI · HDFC</div>
+                  </div>
                 </div>
 
                 <!-- 2 BigBasket (FEATURE G: Card expense labeled "HDFC ••4821") -->
                 <div class="p-3 rounded-2xl bg-[#1C201F] flex items-center justify-between border border-[#3F4947]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#81C784]/20 text-[#81C784] flex items-center justify-center"><span class="material-symbols-outlined text-lg">shopping_cart</span></div>
-                    <div><div class="text-xs font-semibold text-white">BigBasket Weekly</div><div class="text-[11px] text-[#BFC9C5]">Groceries · Yesterday</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#81C784]/20 text-[#81C784] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">shopping_cart</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-white">BigBasket Weekly</div>
+                      <div class="text-[11px] text-[#BFC9C5]">Groceries · Yesterday</div>
+                    </div>
                   </div>
                   <div class="text-right">
                     <div class="text-xs font-bold tabular-nums text-white">₹1,840</div>
@@ -624,28 +804,49 @@
                 <!-- 3 Uber -->
                 <div class="p-3 rounded-2xl bg-[#1C201F] flex items-center justify-between border border-[#3F4947]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#4FC3F7]/20 text-[#4FC3F7] flex items-center justify-center"><span class="material-symbols-outlined text-lg">local_taxi</span></div>
-                    <div><div class="text-xs font-semibold text-white">Uber Go to Office</div><div class="text-[11px] text-[#BFC9C5]">Transport · Today</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#4FC3F7]/20 text-[#4FC3F7] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">local_taxi</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-white">Uber Go to Office</div>
+                      <div class="text-[11px] text-[#BFC9C5]">Transport · Today</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-white">₹280</div><div class="text-[11px] text-[#BFC9C5]">UPI · ICICI</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-white">₹280</div>
+                    <div class="text-[11px] text-[#BFC9C5]">UPI · ICICI</div>
+                  </div>
                 </div>
 
                 <!-- 4 BESCOM -->
                 <div class="p-3 rounded-2xl bg-[#1C201F] flex items-center justify-between border border-[#3F4947]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#FFB74D]/20 text-[#FFB74D] flex items-center justify-center"><span class="material-symbols-outlined text-lg">bolt</span></div>
-                    <div><div class="text-xs font-semibold text-white">BESCOM Electricity</div><div class="text-[11px] text-[#BFC9C5]">Utilities · 02 Oct</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#FFB74D]/20 text-[#FFB74D] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">bolt</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-white">BESCOM Electricity</div>
+                      <div class="text-[11px] text-[#BFC9C5]">Utilities · 02 Oct</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-white">₹1,420</div><div class="text-[11px] text-[#BFC9C5]">Auto-debit</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-white">₹1,420</div>
+                    <div class="text-[11px] text-[#BFC9C5]">Auto-debit</div>
+                  </div>
                 </div>
 
                 <!-- 5 Netflix -->
                 <div class="p-3 rounded-2xl bg-[#1C201F] flex items-center justify-between border border-[#3F4947]/40">
                   <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#F06292]/20 text-[#F06292] flex items-center justify-center"><span class="material-symbols-outlined text-lg">movie</span></div>
-                    <div><div class="text-xs font-semibold text-white">Netflix India Sub</div><div class="text-[11px] text-[#BFC9C5]">Entertainment · 01 Oct</div></div>
+                    <div class="w-9 h-9 rounded-xl bg-[#F06292]/20 text-[#F06292] flex items-center justify-center">
+                      <span class="material-symbols-outlined text-lg">movie</span></div>
+                    <div>
+                      <div class="text-xs font-semibold text-white">Netflix India Sub</div>
+                      <div class="text-[11px] text-[#BFC9C5]">Entertainment · 01 Oct</div>
+                    </div>
                   </div>
-                  <div class="text-right"><div class="text-xs font-bold tabular-nums text-white">₹649</div><div class="text-[11px] font-semibold text-[#53DBC9]">HDFC ••4821</div></div>
+                  <div class="text-right">
+                    <div class="text-xs font-bold tabular-nums text-white">₹649</div>
+                    <div class="text-[11px] font-semibold text-[#53DBC9]">HDFC ••4821</div>
+                  </div>
                 </div>
               </div>
               <div class="h-14"></div>
@@ -653,22 +854,45 @@
 
             <!-- FAB -->
             <div class="absolute right-5 bottom-20 z-20">
-              <button class="min-h-[48px] px-5 py-3 rounded-2xl bg-[#53DBC9] text-[#003731] shadow-lg flex items-center gap-2">
+              <button
+                class="min-h-[48px] px-5 py-3 rounded-2xl bg-[#53DBC9] text-[#003731] shadow-lg flex items-center gap-2">
                 <span class="material-symbols-outlined text-xl">add</span>
                 <span class="text-xs font-bold tracking-wide">Add Expense</span>
               </button>
             </div>
 
             <!-- Bottom Nav Bar -->
-            <div class="h-16 px-4 bg-[#1C201F] border-t border-[#3F4947]/40 flex items-center justify-around shrink-0 z-10">
+            <div
+              class="h-16 px-4 bg-[#1C201F] border-t border-[#3F4947]/40 flex items-center justify-around shrink-0 z-10">
               <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5">
-                <div class="w-12 h-7 rounded-full bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center"><span class="material-symbols-outlined text-lg fill">dashboard</span></div>
+                <div class="w-12 h-7 rounded-full bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg fill">dashboard</span></div>
                 <span class="text-[11px] font-bold text-[#53DBC9]">Home</span>
               </button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">receipt_long</span></div><span class="text-[11px] font-medium">Expenses</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">pie_chart</span></div><span class="text-[11px] font-medium">Budgets</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">auto_awesome</span></div><span class="text-[11px] font-medium">Insights</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">credit_card</span></div><span class="text-[11px] font-medium">Cards</span></button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">receipt_long</span></div><span
+                  class="text-[11px] font-medium">Expenses</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">pie_chart</span></div><span
+                  class="text-[11px] font-medium">Budgets</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">auto_awesome</span></div><span
+                  class="text-[11px] font-medium">Insights</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">credit_card</span></div><span
+                  class="text-[11px] font-medium">Cards</span>
+              </button>
             </div>
 
             <!-- Gesture Bar -->
@@ -688,19 +912,22 @@
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
         <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 04A (Feature A)</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Payment Method Selector Bottom Sheet · Saved Cards & "+ Add credit card"</h2>
+        <h2 class="text-lg font-bold text-[#191C1B]">Payment Method Selector Bottom Sheet · Saved Cards & "+ Add credit
+          card"</h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 04A (LIGHT MODE) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -719,7 +946,8 @@
 
             <!-- Bottom Sheet Scrim & Container -->
             <div class="absolute inset-0 bg-black/40 z-30 flex flex-col justify-end">
-              <div class="bg-[#FAFDFB] rounded-t-[28px] border-t border-[#BFC9C5] p-5 space-y-4 max-h-[720px] overflow-y-auto no-scrollbar shadow-2xl">
+              <div
+                class="bg-[#FAFDFB] rounded-t-[28px] border-t border-[#BFC9C5] p-5 space-y-4 max-h-[720px] overflow-y-auto no-scrollbar shadow-2xl">
                 <!-- Drag Handle -->
                 <div class="w-12 h-1 bg-[#BFC9C5] rounded-full mx-auto"></div>
 
@@ -733,10 +961,12 @@
 
                 <!-- Section: Saved Credit Cards -->
                 <div class="space-y-2">
-                  <div class="text-[11px] font-bold text-[#3F4947] uppercase tracking-wider">Credit Cards (Cycle Reminders)</div>
-                  
+                  <div class="text-[11px] font-bold text-[#3F4947] uppercase tracking-wider">Credit Cards (Cycle
+                    Reminders)</div>
+
                   <!-- Saved Card 1 (Selected) -->
-                  <div class="p-3 rounded-2xl bg-[#006A60]/10 border border-[#006A60] flex items-center justify-between min-h-[48px]">
+                  <div
+                    class="p-3 rounded-2xl bg-[#006A60]/10 border border-[#006A60] flex items-center justify-between min-h-[48px]">
                     <div class="flex items-center gap-3">
                       <div class="w-9 h-9 rounded-xl bg-[#006A60] text-white flex items-center justify-center">
                         <span class="material-symbols-outlined text-lg">credit_card</span>
@@ -750,9 +980,11 @@
                   </div>
 
                   <!-- Saved Card 2 -->
-                  <div class="p-3 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center justify-between min-h-[48px]">
+                  <div
+                    class="p-3 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center justify-between min-h-[48px]">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-xl bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5] flex items-center justify-center">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5] flex items-center justify-center">
                         <span class="material-symbols-outlined text-lg">credit_card</span>
                       </div>
                       <div>
@@ -764,7 +996,8 @@
                   </div>
 
                   <!-- + Add Credit Card Button (Min 48px) -->
-                  <button class="w-full min-h-[48px] px-3.5 rounded-2xl border border-dashed border-[#006A60] text-[#006A60] text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-[#006A60]/5">
+                  <button
+                    class="w-full min-h-[48px] px-3.5 rounded-2xl border border-dashed border-[#006A60] text-[#006A60] text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-[#006A60]/5">
                     <span class="material-symbols-outlined text-base">add</span>
                     <span>+ Add credit card</span>
                   </button>
@@ -773,21 +1006,25 @@
                 <!-- Section: Standard Methods -->
                 <div class="space-y-2 pt-1 border-t border-[#BFC9C5]/40">
                   <div class="text-[11px] font-bold text-[#3F4947] uppercase tracking-wider">Other Payment Methods</div>
-                  
+
                   <div class="grid grid-cols-2 gap-2">
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#006A60] text-lg">qr_code_2</span>
                       <span class="text-xs font-medium text-[#191C1B]">UPI</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#006A60] text-lg">payments</span>
                       <span class="text-xs font-medium text-[#191C1B]">Cash</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#006A60] text-lg">account_balance</span>
                       <span class="text-xs font-medium text-[#191C1B]">Net Banking</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#006A60] text-lg">sync_saved_locally</span>
                       <span class="text-xs font-medium text-[#191C1B]">Auto-debit</span>
                     </button>
@@ -808,9 +1045,11 @@
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -827,7 +1066,8 @@
 
             <!-- Bottom Sheet Scrim & Container (Dark) -->
             <div class="absolute inset-0 bg-black/60 z-30 flex flex-col justify-end">
-              <div class="bg-[#101413] rounded-t-[28px] border-t border-[#3F4947] p-5 space-y-4 max-h-[720px] overflow-y-auto no-scrollbar shadow-2xl">
+              <div
+                class="bg-[#101413] rounded-t-[28px] border-t border-[#3F4947] p-5 space-y-4 max-h-[720px] overflow-y-auto no-scrollbar shadow-2xl">
                 <div class="w-12 h-1 bg-[#3F4947] rounded-full mx-auto"></div>
 
                 <div class="flex items-center justify-between">
@@ -839,9 +1079,11 @@
 
                 <!-- Section: Saved Cards -->
                 <div class="space-y-2">
-                  <div class="text-[11px] font-bold text-[#BFC9C5] uppercase tracking-wider">Credit Cards (Cycle Reminders)</div>
-                  
-                  <div class="p-3 rounded-2xl bg-[#53DBC9]/10 border border-[#53DBC9] flex items-center justify-between min-h-[48px]">
+                  <div class="text-[11px] font-bold text-[#BFC9C5] uppercase tracking-wider">Credit Cards (Cycle
+                    Reminders)</div>
+
+                  <div
+                    class="p-3 rounded-2xl bg-[#53DBC9]/10 border border-[#53DBC9] flex items-center justify-between min-h-[48px]">
                     <div class="flex items-center gap-3">
                       <div class="w-9 h-9 rounded-xl bg-[#53DBC9] text-[#003731] flex items-center justify-center">
                         <span class="material-symbols-outlined text-lg">credit_card</span>
@@ -854,9 +1096,11 @@
                     <span class="material-symbols-outlined text-[#53DBC9] text-xl">radio_button_checked</span>
                   </div>
 
-                  <div class="p-3 rounded-2xl bg-[#1C201F] border border-[#3F4947]/60 flex items-center justify-between min-h-[48px]">
+                  <div
+                    class="p-3 rounded-2xl bg-[#1C201F] border border-[#3F4947]/60 flex items-center justify-between min-h-[48px]">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-xl bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947] flex items-center justify-center">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947] flex items-center justify-center">
                         <span class="material-symbols-outlined text-lg">credit_card</span>
                       </div>
                       <div>
@@ -868,7 +1112,8 @@
                   </div>
 
                   <!-- + Add Credit Card Button (Min 48px) -->
-                  <button class="w-full min-h-[48px] px-3.5 rounded-2xl border border-dashed border-[#53DBC9] text-[#53DBC9] text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-[#53DBC9]/5">
+                  <button
+                    class="w-full min-h-[48px] px-3.5 rounded-2xl border border-dashed border-[#53DBC9] text-[#53DBC9] text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-[#53DBC9]/5">
                     <span class="material-symbols-outlined text-base">add</span>
                     <span>+ Add credit card</span>
                   </button>
@@ -877,21 +1122,25 @@
                 <!-- Section: Standard Methods -->
                 <div class="space-y-2 pt-1 border-t border-[#3F4947]/40">
                   <div class="text-[11px] font-bold text-[#BFC9C5] uppercase tracking-wider">Other Payment Methods</div>
-                  
+
                   <div class="grid grid-cols-2 gap-2">
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#53DBC9] text-lg">qr_code_2</span>
                       <span class="text-xs font-medium text-white">UPI</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#53DBC9] text-lg">payments</span>
                       <span class="text-xs font-medium text-white">Cash</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#53DBC9] text-lg">account_balance</span>
                       <span class="text-xs font-medium text-white">Net Banking</span>
                     </button>
-                    <button class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
+                    <button
+                      class="min-h-[48px] p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 flex items-center gap-2">
                       <span class="material-symbols-outlined text-[#53DBC9] text-lg">sync_saved_locally</span>
                       <span class="text-xs font-medium text-white">Auto-debit</span>
                     </button>
@@ -916,19 +1165,22 @@
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
         <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 04B (Feature B)</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Add Card Bottom Sheet · Nickname, Dates, Reminder Days & Privacy Text</h2>
+        <h2 class="text-lg font-bold text-[#191C1B]">Add Card Bottom Sheet · Nickname, Dates, Reminder Days & Privacy
+          Text</h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 04B (LIGHT MODE) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -941,7 +1193,8 @@
 
             <!-- Add Card Bottom Sheet Container -->
             <div class="absolute inset-0 bg-black/40 z-30 flex flex-col justify-end">
-              <div class="bg-[#FAFDFB] rounded-t-[28px] border-t border-[#BFC9C5] p-5 space-y-3.5 max-h-[740px] overflow-y-auto no-scrollbar shadow-2xl">
+              <div
+                class="bg-[#FAFDFB] rounded-t-[28px] border-t border-[#BFC9C5] p-5 space-y-3.5 max-h-[740px] overflow-y-auto no-scrollbar shadow-2xl">
                 <div class="w-12 h-1 bg-[#BFC9C5] rounded-full mx-auto"></div>
 
                 <div class="flex items-center justify-between">
@@ -960,15 +1213,18 @@
                   <div class="space-y-1">
                     <label class="text-[11px] font-bold text-[#3F4947]">Card Nickname</label>
                     <div class="p-3 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center min-h-[48px]">
-                      <input type="text" value="HDFC Millennia" placeholder="e.g. HDFC Millennia" class="bg-transparent text-xs text-[#191C1B] outline-none font-semibold w-full">
+                      <input type="text" value="HDFC Millennia" placeholder="e.g. HDFC Millennia"
+                        class="bg-transparent text-xs text-[#191C1B] outline-none font-semibold w-full">
                     </div>
                   </div>
 
                   <!-- Last 4 Digits (Optional) -->
                   <div class="space-y-1">
-                    <label class="text-[11px] font-bold text-[#3F4947]">Last 4 digits <span class="font-normal text-[#3F4947]">(optional)</span></label>
+                    <label class="text-[11px] font-bold text-[#3F4947]">Last 4 digits <span
+                        class="font-normal text-[#3F4947]">(optional)</span></label>
                     <div class="p-3 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center min-h-[48px]">
-                      <input type="text" value="4821" maxlength="4" placeholder="e.g. 4821" class="bg-transparent text-xs text-[#191C1B] outline-none font-semibold w-full tabular-nums">
+                      <input type="text" value="4821" maxlength="4" placeholder="e.g. 4821"
+                        class="bg-transparent text-xs text-[#191C1B] outline-none font-semibold w-full tabular-nums">
                     </div>
                   </div>
 
@@ -976,14 +1232,16 @@
                   <div class="grid grid-cols-2 gap-2">
                     <div class="space-y-1">
                       <label class="text-[11px] font-bold text-[#3F4947]">Bill Generation Day</label>
-                      <button class="w-full p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center justify-between min-h-[48px]">
+                      <button
+                        class="w-full p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center justify-between min-h-[48px]">
                         <span class="text-xs font-semibold text-[#191C1B]">16th of month</span>
                         <span class="material-symbols-outlined text-sm text-[#3F4947]">arrow_drop_down</span>
                       </button>
                     </div>
                     <div class="space-y-1">
                       <label class="text-[11px] font-bold text-[#3F4947]">Payment Due Day</label>
-                      <button class="w-full p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center justify-between min-h-[48px]">
+                      <button
+                        class="w-full p-2.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-center justify-between min-h-[48px]">
                         <span class="text-xs font-semibold text-[#191C1B]">5th of month</span>
                         <span class="material-symbols-outlined text-sm text-[#3F4947]">arrow_drop_down</span>
                       </button>
@@ -994,13 +1252,16 @@
                   <div class="space-y-1.5 pt-1">
                     <label class="text-[11px] font-bold text-[#3F4947]">Remind me before due date</label>
                     <div class="grid grid-cols-3 gap-2">
-                      <button class="min-h-[48px] rounded-2xl border border-[#BFC9C5] text-xs font-medium text-[#3F4947] flex items-center justify-center">
+                      <button
+                        class="min-h-[48px] rounded-2xl border border-[#BFC9C5] text-xs font-medium text-[#3F4947] flex items-center justify-center">
                         1 day before
                       </button>
-                      <button class="min-h-[48px] rounded-2xl bg-[#006A60] text-white text-xs font-bold flex items-center justify-center shadow-sm">
+                      <button
+                        class="min-h-[48px] rounded-2xl bg-[#006A60] text-white text-xs font-bold flex items-center justify-center shadow-sm">
                         3 days before
                       </button>
-                      <button class="min-h-[48px] rounded-2xl border border-[#BFC9C5] text-xs font-medium text-[#3F4947] flex items-center justify-center">
+                      <button
+                        class="min-h-[48px] rounded-2xl border border-[#BFC9C5] text-xs font-medium text-[#3F4947] flex items-center justify-center">
                         5 days before
                       </button>
                     </div>
@@ -1015,7 +1276,8 @@
                   </div>
 
                   <!-- Primary Save Button (Min 48px) -->
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-[#006A60] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-[#006A60] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
                     <span class="material-symbols-outlined text-sm">notifications_active</span>
                     <span>Save card &amp; enable reminders</span>
                   </button>
@@ -1034,9 +1296,11 @@
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1049,7 +1313,8 @@
 
             <!-- Add Card Bottom Sheet Container (Dark) -->
             <div class="absolute inset-0 bg-black/60 z-30 flex flex-col justify-end">
-              <div class="bg-[#101413] rounded-t-[28px] border-t border-[#3F4947] p-5 space-y-3.5 max-h-[740px] overflow-y-auto no-scrollbar shadow-2xl">
+              <div
+                class="bg-[#101413] rounded-t-[28px] border-t border-[#3F4947] p-5 space-y-3.5 max-h-[740px] overflow-y-auto no-scrollbar shadow-2xl">
                 <div class="w-12 h-1 bg-[#3F4947] rounded-full mx-auto"></div>
 
                 <div class="flex items-center justify-between">
@@ -1068,15 +1333,18 @@
                   <div class="space-y-1">
                     <label class="text-[11px] font-bold text-[#BFC9C5]">Card Nickname</label>
                     <div class="p-3 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center min-h-[48px]">
-                      <input type="text" value="HDFC Millennia" placeholder="e.g. HDFC Millennia" class="bg-transparent text-xs text-white outline-none font-semibold w-full">
+                      <input type="text" value="HDFC Millennia" placeholder="e.g. HDFC Millennia"
+                        class="bg-transparent text-xs text-white outline-none font-semibold w-full">
                     </div>
                   </div>
 
                   <!-- Last 4 Digits -->
                   <div class="space-y-1">
-                    <label class="text-[11px] font-bold text-[#BFC9C5]">Last 4 digits <span class="font-normal text-[#899390]">(optional)</span></label>
+                    <label class="text-[11px] font-bold text-[#BFC9C5]">Last 4 digits <span
+                        class="font-normal text-[#899390]">(optional)</span></label>
                     <div class="p-3 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center min-h-[48px]">
-                      <input type="text" value="4821" maxlength="4" placeholder="e.g. 4821" class="bg-transparent text-xs text-white outline-none font-semibold w-full tabular-nums">
+                      <input type="text" value="4821" maxlength="4" placeholder="e.g. 4821"
+                        class="bg-transparent text-xs text-white outline-none font-semibold w-full tabular-nums">
                     </div>
                   </div>
 
@@ -1084,14 +1352,16 @@
                   <div class="grid grid-cols-2 gap-2">
                     <div class="space-y-1">
                       <label class="text-[11px] font-bold text-[#BFC9C5]">Bill Generation Day</label>
-                      <button class="w-full p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center justify-between min-h-[48px]">
+                      <button
+                        class="w-full p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center justify-between min-h-[48px]">
                         <span class="text-xs font-semibold text-white">16th of month</span>
                         <span class="material-symbols-outlined text-sm text-[#BFC9C5]">arrow_drop_down</span>
                       </button>
                     </div>
                     <div class="space-y-1">
                       <label class="text-[11px] font-bold text-[#BFC9C5]">Payment Due Day</label>
-                      <button class="w-full p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center justify-between min-h-[48px]">
+                      <button
+                        class="w-full p-2.5 rounded-2xl bg-[#1C201F] border border-[#3F4947] flex items-center justify-between min-h-[48px]">
                         <span class="text-xs font-semibold text-white">5th of month</span>
                         <span class="material-symbols-outlined text-sm text-[#BFC9C5]">arrow_drop_down</span>
                       </button>
@@ -1102,13 +1372,16 @@
                   <div class="space-y-1.5 pt-1">
                     <label class="text-[11px] font-bold text-[#BFC9C5]">Remind me before due date</label>
                     <div class="grid grid-cols-3 gap-2">
-                      <button class="min-h-[48px] rounded-2xl border border-[#3F4947] text-xs font-medium text-[#BFC9C5] flex items-center justify-center">
+                      <button
+                        class="min-h-[48px] rounded-2xl border border-[#3F4947] text-xs font-medium text-[#BFC9C5] flex items-center justify-center">
                         1 day before
                       </button>
-                      <button class="min-h-[48px] rounded-2xl bg-[#53DBC9] text-[#003731] text-xs font-bold flex items-center justify-center shadow-sm">
+                      <button
+                        class="min-h-[48px] rounded-2xl bg-[#53DBC9] text-[#003731] text-xs font-bold flex items-center justify-center shadow-sm">
                         3 days before
                       </button>
-                      <button class="min-h-[48px] rounded-2xl border border-[#3F4947] text-xs font-medium text-[#BFC9C5] flex items-center justify-center">
+                      <button
+                        class="min-h-[48px] rounded-2xl border border-[#3F4947] text-xs font-medium text-[#BFC9C5] flex items-center justify-center">
                         5 days before
                       </button>
                     </div>
@@ -1123,7 +1396,8 @@
                   </div>
 
                   <!-- Primary Save Button -->
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
                     <span class="material-symbols-outlined text-sm">notifications_active</span>
                     <span>Save card &amp; enable reminders</span>
                   </button>
@@ -1147,19 +1421,22 @@
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
         <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 04C (Feature C)</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Notification Permission Explainer · Pre-Prompt Modal ("Allow" / "Not now")</h2>
+        <h2 class="text-lg font-bold text-[#191C1B]">Notification Permission Explainer · Pre-Prompt Modal ("Allow" /
+          "Not now")</h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 04C (LIGHT MODE) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1176,16 +1453,19 @@
 
             <!-- Modal Overlay -->
             <div class="absolute inset-0 bg-black/40 z-30 flex items-center justify-center p-6">
-              <div class="w-full bg-[#FAFDFB] rounded-[28px] border border-[#BFC9C5] p-6 space-y-4 shadow-2xl text-center">
+              <div
+                class="w-full bg-[#FAFDFB] rounded-[28px] border border-[#BFC9C5] p-6 space-y-4 shadow-2xl text-center">
                 <!-- Icon -->
-                <div class="w-14 h-14 rounded-2xl bg-[#006A60]/10 text-[#006A60] mx-auto flex items-center justify-center">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-[#006A60]/10 text-[#006A60] mx-auto flex items-center justify-center">
                   <span class="material-symbols-outlined text-3xl">notifications_active</span>
                 </div>
 
                 <div class="space-y-1.5">
                   <h3 class="text-base font-bold text-[#191C1B]">Get reminded before your card payment is due</h3>
                   <p class="text-xs text-[#3F4947] leading-relaxed">
-                    Kharcha AI tracks card payments offline and alerts you 3 days before your due date so you never incur late fees.
+                    Kharcha AI tracks card payments offline and alerts you 3 days before your due date so you never
+                    incur late fees.
                   </p>
                 </div>
 
@@ -1207,10 +1487,12 @@
 
                 <!-- Actions -->
                 <div class="space-y-2 pt-2">
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-[#006A60] text-white font-bold text-xs shadow-md">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-[#006A60] text-white font-bold text-xs shadow-md">
                     Allow
                   </button>
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-transparent text-[#3F4947] font-semibold text-xs hover:bg-[#EDF0EE]">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-transparent text-[#3F4947] font-semibold text-xs hover:bg-[#EDF0EE]">
                     Not now
                   </button>
                 </div>
@@ -1229,9 +1511,11 @@
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1247,15 +1531,18 @@
 
             <!-- Modal Overlay (Dark) -->
             <div class="absolute inset-0 bg-black/60 z-30 flex items-center justify-center p-6">
-              <div class="w-full bg-[#101413] rounded-[28px] border border-[#3F4947] p-6 space-y-4 shadow-2xl text-center">
-                <div class="w-14 h-14 rounded-2xl bg-[#53DBC9]/10 text-[#53DBC9] mx-auto flex items-center justify-center">
+              <div
+                class="w-full bg-[#101413] rounded-[28px] border border-[#3F4947] p-6 space-y-4 shadow-2xl text-center">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-[#53DBC9]/10 text-[#53DBC9] mx-auto flex items-center justify-center">
                   <span class="material-symbols-outlined text-3xl">notifications_active</span>
                 </div>
 
                 <div class="space-y-1.5">
                   <h3 class="text-base font-bold text-white">Get reminded before your card payment is due</h3>
                   <p class="text-xs text-[#BFC9C5] leading-relaxed">
-                    Kharcha AI tracks card payments offline and alerts you 3 days before your due date so you never incur late fees.
+                    Kharcha AI tracks card payments offline and alerts you 3 days before your due date so you never
+                    incur late fees.
                   </p>
                 </div>
 
@@ -1275,10 +1562,12 @@
                 </div>
 
                 <div class="space-y-2 pt-2">
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs shadow-md">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs shadow-md">
                     Allow
                   </button>
-                  <button class="w-full min-h-[48px] py-3 rounded-2xl bg-transparent text-[#BFC9C5] font-semibold text-xs hover:bg-[#1C201F]">
+                  <button
+                    class="w-full min-h-[48px] py-3 rounded-2xl bg-transparent text-[#BFC9C5] font-semibold text-xs hover:bg-[#1C201F]">
                     Not now
                   </button>
                 </div>
@@ -1302,19 +1591,22 @@
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
         <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 14 (Feature D)</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Credit Cards Screen (Opened from Settings) · Active Cards & Empty State</h2>
+        <h2 class="text-lg font-bold text-[#191C1B]">Credit Cards Screen (Opened from Settings) · Active Cards & Empty
+          State</h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 14 (LIGHT MODE - Active Saved Cards) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode (Saved Cards)
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1325,7 +1617,8 @@
 
             <!-- App Bar -->
             <div class="h-12 px-3 flex items-center justify-between shrink-0">
-              <button class="min-h-[48px] min-w-[48px] flex items-center justify-center rounded-full hover:bg-[#EDF0EE]">
+              <button
+                class="min-h-[48px] min-w-[48px] flex items-center justify-center rounded-full hover:bg-[#EDF0EE]">
                 <span class="material-symbols-outlined text-xl text-[#191C1B]">arrow_back</span>
               </button>
               <span class="text-sm font-bold text-[#191C1B]">Credit Cards</span>
@@ -1336,7 +1629,7 @@
 
             <!-- Scrollable Content -->
             <div class="flex-1 overflow-y-auto no-scrollbar px-5 py-2 space-y-4">
-              
+
               <!-- Info Note -->
               <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/50 flex items-start gap-2.5">
                 <span class="material-symbols-outlined text-[#006A60] text-base mt-0.5">info</span>
@@ -1358,7 +1651,8 @@
                     </div>
                   </div>
                   <!-- Edit Icon Button (Min 48px) -->
-                  <button class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
+                  <button
+                    class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
                     <span class="material-symbols-outlined text-lg">edit</span>
                   </button>
                 </div>
@@ -1366,7 +1660,8 @@
                 <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5]/40 space-y-1">
                   <div class="text-[11px] text-[#3F4947]">Current billing cycle (16 Sep – 15 Oct)</div>
                   <!-- Exact required label: "tracked this cycle" -->
-                  <div class="text-2xl font-bold tabular-nums text-[#191C1B]">₹12,340 <span class="text-xs font-normal text-[#3F4947]">tracked this cycle</span></div>
+                  <div class="text-2xl font-bold tabular-nums text-[#191C1B]">₹12,340 <span
+                      class="text-xs font-normal text-[#3F4947]">tracked this cycle</span></div>
                 </div>
 
                 <div class="flex items-center justify-between pt-1">
@@ -1396,14 +1691,16 @@
                       <div class="text-[11px] font-mono text-[#3F4947]">•••• •••• •••• 1190</div>
                     </div>
                   </div>
-                  <button class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
+                  <button
+                    class="min-h-[48px] min-w-[48px] flex items-center justify-center text-[#3F4947] hover:text-[#191C1B]">
                     <span class="material-symbols-outlined text-lg">edit</span>
                   </button>
                 </div>
 
                 <div class="p-3 rounded-2xl bg-[#FAFDFB] border border-[#BFC9C5]/40 space-y-1">
                   <div class="text-[11px] text-[#3F4947]">Current billing cycle (12 Sep – 11 Oct)</div>
-                  <div class="text-2xl font-bold tabular-nums text-[#191C1B]">₹4,210 <span class="text-xs font-normal text-[#3F4947]">tracked this cycle</span></div>
+                  <div class="text-2xl font-bold tabular-nums text-[#191C1B]">₹4,210 <span
+                      class="text-xs font-normal text-[#3F4947]">tracked this cycle</span></div>
                 </div>
 
                 <div class="flex items-center justify-between pt-1">
@@ -1421,7 +1718,8 @@
               </div>
 
               <!-- + Add Another Card -->
-              <button class="w-full min-h-[48px] py-3 rounded-2xl border border-dashed border-[#006A60] text-[#006A60] text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#006A60]/5">
+              <button
+                class="w-full min-h-[48px] py-3 rounded-2xl border border-dashed border-[#006A60] text-[#006A60] text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-[#006A60]/5">
                 <span class="material-symbols-outlined text-base">add</span>
                 <span>Add another card</span>
               </button>
@@ -1438,11 +1736,14 @@
         <!-- Screen 14 (DARK MODE - Empty State Variant) -->
         <div class="theme-card theme-dark flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode (Empty State Included)
+            <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode (Empty State
+            Included)
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
             <!-- Android Status Bar -->
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1453,7 +1754,8 @@
 
             <!-- App Bar -->
             <div class="h-12 px-3 flex items-center justify-between shrink-0">
-              <button class="min-h-[48px] min-w-[48px] flex items-center justify-center rounded-full hover:bg-[#1C201F]">
+              <button
+                class="min-h-[48px] min-w-[48px] flex items-center justify-center rounded-full hover:bg-[#1C201F]">
                 <span class="material-symbols-outlined text-xl text-[#E1E3E2]">arrow_back</span>
               </button>
               <span class="text-sm font-bold text-white">Credit Cards</span>
@@ -1462,14 +1764,16 @@
 
             <!-- Empty State Body -->
             <div class="flex-1 flex flex-col items-center justify-center px-8 text-center space-y-4">
-              <div class="w-16 h-16 rounded-3xl bg-[#1C201F] border border-[#3F4947] text-[#53DBC9] flex items-center justify-center">
+              <div
+                class="w-16 h-16 rounded-3xl bg-[#1C201F] border border-[#3F4947] text-[#53DBC9] flex items-center justify-center">
                 <span class="material-symbols-outlined text-3xl">credit_card_off</span>
               </div>
 
               <div class="space-y-1.5">
                 <h3 class="text-base font-bold text-white">No credit cards added yet</h3>
                 <p class="text-xs text-[#BFC9C5] leading-relaxed">
-                  Add your credit card nickname and cycle dates to receive bill reminders and monitor expenses per cycle.
+                  Add your credit card nickname and cycle dates to receive bill reminders and monitor expenses per
+                  cycle.
                 </p>
               </div>
 
@@ -1486,7 +1790,8 @@
               </div>
 
               <!-- Add Card Primary Action (Min 48px) -->
-              <button class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+              <button
+                class="w-full min-h-[48px] py-3 rounded-2xl bg-[#53DBC9] text-[#003731] font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
                 <span class="material-symbols-outlined text-sm">add</span>
                 <span>+ Add your first card</span>
               </button>
@@ -1509,18 +1814,21 @@
     <div class="space-y-4">
       <div class="border-b border-[#BFC9C5] pb-2">
         <span class="text-xs uppercase tracking-widest font-bold text-[#006A60]">Screen 10</span>
-        <h2 class="text-lg font-bold text-[#191C1B]">Financial Insights · Factual AI Monthly Summary & Monthly Cards</h2>
+        <h2 class="text-lg font-bold text-[#191C1B]">Financial Insights · Factual AI Monthly Summary & Monthly Cards
+        </h2>
       </div>
 
       <div class="flex flex-wrap items-start justify-center gap-10">
-        
+
         <!-- Screen 10 (LIGHT MODE) -->
         <div class="theme-card theme-light flex flex-col items-center">
           <div class="mb-2 text-xs font-semibold text-[#3F4947] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#006A60]">light_mode</span> Light Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#FAFDFB] text-[#191C1B] rounded-[48px] shadow-2xl border-[10px] border-[#191C1B] overflow-hidden flex flex-col select-none ring-1 ring-black/10">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#191C1B] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1534,7 +1842,8 @@
                 <span class="material-symbols-outlined text-[#006A60]">auto_awesome</span>
                 <h2 class="text-sm font-bold text-[#191C1B]">Financial Insights</h2>
               </div>
-              <button class="min-h-[48px] flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-[#EDF0EE] text-[#191C1B]">
+              <button
+                class="min-h-[48px] flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-[#EDF0EE] text-[#191C1B]">
                 <span>October 2026</span><span class="material-symbols-outlined text-sm">expand_more</span>
               </button>
             </div>
@@ -1554,7 +1863,10 @@
                   </div>
                 </div>
                 <p class="text-xs leading-relaxed text-[#191C1B]">
-                  Total spending is <strong class="tabular-nums">₹54,230</strong> — <strong class="tabular-nums">72%</strong> of your ₹75,000 budget used by 4 Oct. Projected month-end spend is <strong class="tabular-nums">₹81,600</strong> (excluding rent-driven front-loading). Food &amp; Dining is <span class="text-[#186C45] font-semibold">₹3,200 lower</span> than same days in Sep.
+                  Total spending is <strong class="tabular-nums">₹54,230</strong> — <strong
+                    class="tabular-nums">72%</strong> of your ₹75,000 budget used by 4 Oct. Projected month-end spend is
+                  <strong class="tabular-nums">₹81,600</strong> (excluding rent-driven front-loading). Food &amp; Dining
+                  is <span class="text-[#186C45] font-semibold">₹3,200 lower</span> than same days in Sep.
                 </p>
               </div>
 
@@ -1564,45 +1876,72 @@
                 <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center"><span class="material-symbols-outlined text-base">restaurant</span></div>
-                      <div><div class="text-xs font-bold text-[#191C1B]">Dining Spend Down</div><div class="text-[11px] text-[#3F4947]">Food & Dining</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">restaurant</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-[#191C1B]">Dining Spend Down</div>
+                        <div class="text-[11px] text-[#3F4947]">Food & Dining</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#186C45]/15 text-[#186C45]">-₹3,200 vs Sep</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#186C45]/15 text-[#186C45]">-₹3,200
+                      vs Sep</span>
                   </div>
-                  <p class="text-xs text-[#3F4947] leading-snug">Food & Dining spend is ₹3,200 lower than the same days in September across all restaurant and delivery orders.</p>
+                  <p class="text-xs text-[#3F4947] leading-snug">Food & Dining spend is ₹3,200 lower than the same days
+                    in September across all restaurant and delivery orders.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#6A1B9A]/15 text-[#6A1B9A] flex items-center justify-center"><span class="material-symbols-outlined text-base">home</span></div>
-                      <div><div class="text-xs font-bold text-[#191C1B]">Rent is 41% of spend</div><div class="text-[11px] text-[#3F4947]">Housing & Rent</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#6A1B9A]/15 text-[#6A1B9A] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">home</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-[#191C1B]">Rent is 41% of spend</div>
+                        <div class="text-[11px] text-[#3F4947]">Housing & Rent</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#6A1B9A]/15 text-[#6A1B9A]">41% of total</span>
+                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#6A1B9A]/15 text-[#6A1B9A]">41%
+                      of total</span>
                   </div>
-                  <p class="text-xs text-[#3F4947] leading-snug">₹22,000 paid on 1 Oct accounts for 40.6% of your total expenditure this month. Spends normalize after week 1.</p>
+                  <p class="text-xs text-[#3F4947] leading-snug">₹22,000 paid on 1 Oct accounts for 40.6% of your total
+                    expenditure this month. Spends normalize after week 1.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#2E7D32]/15 text-[#2E7D32] flex items-center justify-center"><span class="material-symbols-outlined text-base">shopping_cart</span></div>
-                      <div><div class="text-xs font-bold text-[#191C1B]">Grocery Spend on Track</div><div class="text-[11px] text-[#3F4947]">BigBasket & Instamart</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#2E7D32]/15 text-[#2E7D32] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">shopping_cart</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-[#191C1B]">Grocery Spend on Track</div>
+                        <div class="text-[11px] text-[#3F4947]">BigBasket & Instamart</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5]">65% utilized</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5]">65%
+                      utilized</span>
                   </div>
-                  <p class="text-xs text-[#3F4947] leading-snug">₹6,400 spent of your ₹10,000 monthly grocery budget. Within regular monthly purchasing pace.</p>
+                  <p class="text-xs text-[#3F4947] leading-snug">₹6,400 spent of your ₹10,000 monthly grocery budget.
+                    Within regular monthly purchasing pace.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="p-3.5 rounded-2xl bg-[#EDF0EE] border border-[#BFC9C5]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center"><span class="material-symbols-outlined text-base">storefront</span></div>
-                      <div><div class="text-xs font-bold text-[#191C1B]">Top merchant: Swiggy</div><div class="text-[11px] text-[#3F4947]">9 orders · ₹3,850</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#D95D39]/15 text-[#D95D39] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">storefront</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-[#191C1B]">Top merchant: Swiggy</div>
+                        <div class="text-[11px] text-[#3F4947]">9 orders · ₹3,850</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5]">₹428 avg</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#EDF0EE] text-[#3F4947] border border-[#BFC9C5]">₹428
+                      avg</span>
                   </div>
-                  <p class="text-xs text-[#3F4947] leading-snug">Swiggy is your most frequented merchant this month with 9 orders totaling ₹3,850.</p>
+                  <p class="text-xs text-[#3F4947] leading-snug">Swiggy is your most frequented merchant this month with
+                    9 orders totaling ₹3,850.</p>
                 </div>
               </div>
 
@@ -1613,15 +1952,37 @@
               </div>
             </div>
 
-            <div class="h-16 px-4 bg-[#EDF0EE] border-t border-[#BFC9C5]/40 flex items-center justify-around shrink-0 z-10">
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">dashboard</span></div><span class="text-[11px] font-medium">Home</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">receipt_long</span></div><span class="text-[11px] font-medium">Expenses</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">pie_chart</span></div><span class="text-[11px] font-medium">Budgets</span></button>
+            <div
+              class="h-16 px-4 bg-[#EDF0EE] border-t border-[#BFC9C5]/40 flex items-center justify-around shrink-0 z-10">
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">dashboard</span></div><span
+                  class="text-[11px] font-medium">Home</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">receipt_long</span></div><span
+                  class="text-[11px] font-medium">Expenses</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">pie_chart</span></div><span
+                  class="text-[11px] font-medium">Budgets</span>
+              </button>
               <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5">
-                <div class="w-12 h-7 rounded-full bg-[#006A60]/15 text-[#006A60] flex items-center justify-center"><span class="material-symbols-outlined text-lg fill">auto_awesome</span></div>
+                <div class="w-12 h-7 rounded-full bg-[#006A60]/15 text-[#006A60] flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg fill">auto_awesome</span></div>
                 <span class="text-[11px] font-bold text-[#006A60]">Insights</span>
               </button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">credit_card</span></div><span class="text-[11px] font-medium">Cards</span></button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#3F4947]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">credit_card</span></div><span
+                  class="text-[11px] font-medium">Cards</span>
+              </button>
             </div>
 
             <div class="h-4 bg-[#EDF0EE] flex justify-center items-center shrink-0">
@@ -1635,8 +1996,10 @@
           <div class="mb-2 text-xs font-semibold text-[#BFC9C5] flex items-center gap-1">
             <span class="material-symbols-outlined text-sm text-[#53DBC9]">dark_mode</span> Dark Mode
           </div>
-          <div class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
-            <div class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
+          <div
+            class="relative w-[390px] h-[844px] bg-[#101413] text-[#E1E3E2] rounded-[48px] shadow-2xl border-[10px] border-[#1C201F] overflow-hidden flex flex-col select-none ring-1 ring-white/10">
+            <div
+              class="h-8 px-6 flex items-center justify-between text-xs font-medium text-[#E1E3E2] tracking-tight shrink-0">
               <span class="font-semibold">9:41</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-[16px]">wifi</span>
@@ -1650,7 +2013,8 @@
                 <span class="material-symbols-outlined text-[#53DBC9]">auto_awesome</span>
                 <h2 class="text-sm font-bold text-white">Financial Insights</h2>
               </div>
-              <button class="min-h-[48px] flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-[#1C201F] text-[#E1E3E2]">
+              <button
+                class="min-h-[48px] flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-[#1C201F] text-[#E1E3E2]">
                 <span>October 2026</span><span class="material-symbols-outlined text-sm">expand_more</span>
               </button>
             </div>
@@ -1670,7 +2034,11 @@
                   </div>
                 </div>
                 <p class="text-xs leading-relaxed text-[#E1E3E2]">
-                  Total spending is <strong class="text-white tabular-nums">₹54,230</strong> — <strong class="text-white tabular-nums">72%</strong> of your ₹75,000 budget used by 4 Oct. Projected month-end spend is <strong class="text-white tabular-nums">₹81,600</strong> (excluding rent-driven front-loading). Food &amp; Dining is <span class="text-[#73DA9E] font-semibold">₹3,200 lower</span> than same days in Sep.
+                  Total spending is <strong class="text-white tabular-nums">₹54,230</strong> — <strong
+                    class="text-white tabular-nums">72%</strong> of your ₹75,000 budget used by 4 Oct. Projected
+                  month-end spend is <strong class="text-white tabular-nums">₹81,600</strong> (excluding rent-driven
+                  front-loading). Food &amp; Dining is <span class="text-[#73DA9E] font-semibold">₹3,200 lower</span>
+                  than same days in Sep.
                 </p>
               </div>
 
@@ -1680,45 +2048,72 @@
                 <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center"><span class="material-symbols-outlined text-base">restaurant</span></div>
-                      <div><div class="text-xs font-bold text-white">Dining Spend Down</div><div class="text-[11px] text-[#BFC9C5]">Food & Dining</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">restaurant</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-white">Dining Spend Down</div>
+                        <div class="text-[11px] text-[#BFC9C5]">Food & Dining</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#73DA9E]/20 text-[#73DA9E]">-₹3,200 vs Sep</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#73DA9E]/20 text-[#73DA9E]">-₹3,200
+                      vs Sep</span>
                   </div>
-                  <p class="text-xs text-[#BFC9C5] leading-snug">Food & Dining spend is ₹3,200 lower than the same days in September across all restaurant and delivery orders.</p>
+                  <p class="text-xs text-[#BFC9C5] leading-snug">Food & Dining spend is ₹3,200 lower than the same days
+                    in September across all restaurant and delivery orders.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#BA68C8]/20 text-[#BA68C8] flex items-center justify-center"><span class="material-symbols-outlined text-base">home</span></div>
-                      <div><div class="text-xs font-bold text-white">Rent is 41% of spend</div><div class="text-[11px] text-[#BFC9C5]">Housing & Rent</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#BA68C8]/20 text-[#BA68C8] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">home</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-white">Rent is 41% of spend</div>
+                        <div class="text-[11px] text-[#BFC9C5]">Housing & Rent</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#BA68C8]/20 text-[#BA68C8]">41% of total</span>
+                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#BA68C8]/20 text-[#BA68C8]">41%
+                      of total</span>
                   </div>
-                  <p class="text-xs text-[#BFC9C5] leading-snug">₹22,000 paid on 1 Oct accounts for 40.6% of your total expenditure this month. Spends normalize after week 1.</p>
+                  <p class="text-xs text-[#BFC9C5] leading-snug">₹22,000 paid on 1 Oct accounts for 40.6% of your total
+                    expenditure this month. Spends normalize after week 1.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#81C784]/20 text-[#81C784] flex items-center justify-center"><span class="material-symbols-outlined text-base">shopping_cart</span></div>
-                      <div><div class="text-xs font-bold text-white">Grocery Spend on Track</div><div class="text-[11px] text-[#BFC9C5]">BigBasket & Instamart</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#81C784]/20 text-[#81C784] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">shopping_cart</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-white">Grocery Spend on Track</div>
+                        <div class="text-[11px] text-[#BFC9C5]">BigBasket & Instamart</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947]">65% utilized</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947]">65%
+                      utilized</span>
                   </div>
-                  <p class="text-xs text-[#BFC9C5] leading-snug">₹6,400 spent of your ₹10,000 monthly grocery budget. Within regular monthly purchasing pace.</p>
+                  <p class="text-xs text-[#BFC9C5] leading-snug">₹6,400 spent of your ₹10,000 monthly grocery budget.
+                    Within regular monthly purchasing pace.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="p-3.5 rounded-2xl bg-[#1C201F] border border-[#3F4947]/40 space-y-1.5">
                   <div class="flex items-start justify-between">
                     <div class="flex items-center gap-2.5">
-                      <div class="w-8 h-8 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center"><span class="material-symbols-outlined text-base">storefront</span></div>
-                      <div><div class="text-xs font-bold text-white">Top merchant: Swiggy</div><div class="text-[11px] text-[#BFC9C5]">9 orders · ₹3,850</div></div>
+                      <div class="w-8 h-8 rounded-xl bg-[#FF8A65]/20 text-[#FF8A65] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-base">storefront</span></div>
+                      <div>
+                        <div class="text-xs font-bold text-white">Top merchant: Swiggy</div>
+                        <div class="text-[11px] text-[#BFC9C5]">9 orders · ₹3,850</div>
+                      </div>
                     </div>
-                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947]">₹428 avg</span>
+                    <span
+                      class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#1C201F] text-[#BFC9C5] border border-[#3F4947]">₹428
+                      avg</span>
                   </div>
-                  <p class="text-xs text-[#BFC9C5] leading-snug">Swiggy is your most frequented merchant this month with 9 orders totaling ₹3,850.</p>
+                  <p class="text-xs text-[#BFC9C5] leading-snug">Swiggy is your most frequented merchant this month with
+                    9 orders totaling ₹3,850.</p>
                 </div>
               </div>
 
@@ -1729,15 +2124,37 @@
               </div>
             </div>
 
-            <div class="h-16 px-4 bg-[#1C201F] border-t border-[#3F4947]/40 flex items-center justify-around shrink-0 z-10">
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">dashboard</span></div><span class="text-[11px] font-medium">Home</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">receipt_long</span></div><span class="text-[11px] font-medium">Expenses</span></button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">pie_chart</span></div><span class="text-[11px] font-medium">Budgets</span></button>
+            <div
+              class="h-16 px-4 bg-[#1C201F] border-t border-[#3F4947]/40 flex items-center justify-around shrink-0 z-10">
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">dashboard</span></div><span
+                  class="text-[11px] font-medium">Home</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">receipt_long</span></div><span
+                  class="text-[11px] font-medium">Expenses</span>
+              </button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">pie_chart</span></div><span
+                  class="text-[11px] font-medium">Budgets</span>
+              </button>
               <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5">
-                <div class="w-12 h-7 rounded-full bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center"><span class="material-symbols-outlined text-lg fill">auto_awesome</span></div>
+                <div class="w-12 h-7 rounded-full bg-[#53DBC9]/20 text-[#53DBC9] flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg fill">auto_awesome</span></div>
                 <span class="text-[11px] font-bold text-[#53DBC9]">Insights</span>
               </button>
-              <button class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]"><div class="w-12 h-7 flex items-center justify-center"><span class="material-symbols-outlined text-lg">credit_card</span></div><span class="text-[11px] font-medium">Cards</span></button>
+              <button
+                class="min-h-[48px] min-w-[48px] flex flex-col items-center justify-center gap-0.5 text-[#BFC9C5]">
+                <div class="w-12 h-7 flex items-center justify-center"><span
+                    class="material-symbols-outlined text-lg">credit_card</span></div><span
+                  class="text-[11px] font-medium">Cards</span>
+              </button>
             </div>
 
             <div class="h-4 bg-[#1C201F] flex justify-center items-center shrink-0">
@@ -1781,4 +2198,5 @@
   </script>
 
 </body>
+
 </html>
